@@ -50,3 +50,25 @@ export function addRetry(session, id) {
   session.queue.splice(position, 0, {kind: 'quiz', id, review: true, retry: true});
   session.total++;
 }
+
+// Extend saved V1 chapter queues without resetting answers, selections or position.
+export function upgradeSessions(state, questions, bankVersion) {
+  const sessions = new Set([state.session, ...Object.values(state.sessions || {})].filter(Boolean));
+  for (const session of sessions) {
+    if (session.bankVersion === bankVersion) continue;
+    if (session.mode === 'learn') {
+      const queued = new Set(session.queue.map(t => t.id));
+      const additions = questions.filter(q => q.chapter === session.chapter && !queued.has(q.id) && !state.progress[q.id]?.seen);
+      const extra = makeSession(additions, state.progress, {chapter: session.chapter});
+      if (extra) { session.queue.push(...extra.queue); session.total += extra.queue.length; }
+    }
+    session.bankVersion = bankVersion;
+  }
+  return state;
+}
+export function questionTypeLabel(type) {
+  return {single:'单选题', multiple:'多选题', judge:'判断题'}[type];
+}
+export function answerLabel(question, selected) {
+  return question.type === 'judge' ? selected.map(id => question.options.find(o => o.id === id)?.text || id).join('、') : selected.join('、');
+}

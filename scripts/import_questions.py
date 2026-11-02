@@ -18,16 +18,20 @@ for (ci,title,subtitle),start,end in zip(sections,starts,starts[1:]):
     answers={}
     for kind,a,b in zip(['single','multiple','judge'],ah,ah[1:]):
         txt=' '.join(apart[a+1:b])
-        if kind=='judge': continue
+        if kind=='judge':
+            tokens=([('A' if x=='正确' else 'B') for x in re.findall(r'正确|错误',txt)] if ci<2 else list(''.join(re.findall(r'[AB]+',txt))))
+            answers[kind]=tokens
+            continue
         # Numbered lists and range-labelled groups both resolve into ordered answer tokens.
         tokens=re.findall(r'[A-E]+',txt)
         if ci==2 and kind=='single': tokens=list(''.join(tokens))
         answers[kind]=tokens
-    kind=None; cur=None; groups={'single':[],'multiple':[]}
+    kind=None; cur=None; groups={'single':[],'multiple':[],'judge':[]}
     for l in qpart:
         if re.match(r'^一、.*单',l): kind='single';cur=None;continue
         if re.match(r'^二、.*多',l): kind='multiple';cur=None;continue
-        if re.match(r'^三、',l): kind=None;cur=None;continue
+        if re.match(r'^三、',l): kind='judge';cur=None;continue
+        if re.match(r'^四、|^材料分析题',l): kind=None;cur=None;continue
         if kind is None: continue
         m=re.match(r'^(\d+)\s*[、.．]\s*(.*)',l)
         if m:
@@ -38,6 +42,10 @@ for (ci,title,subtitle),start,end in zip(sections,starts,starts[1:]):
         assert [q['number'] for q in items]==list(range(1,len(items)+1))
         for q,answer in zip(items,answers[kind]):
             txt='\n'.join(q['parts'])
+            if kind=='judge':
+                assert answer in ('A','B')
+                questions.append({'id':f'c{ci}-judge-{q["number"]}','chapter':ci,'number':q['number'],'type':'judge','prompt':re.sub(r'\s+',' ',txt).strip(),'options':[{'id':'A','text':'正确'},{'id':'B','text':'错误'}],'answer':[answer]})
+                continue
             matches=list(re.finditer(r'([A-E])(?:[.．、]|\s+|(?=[\u4e00-\u9fff]))',txt))
             # Each choice label occurs exactly once and in alphabetical order.
             assert [m[1] for m in matches]==list('ABCDE'[:len(matches)]),(ci,kind,q['number'],txt)
@@ -47,6 +55,6 @@ for (ci,title,subtitle),start,end in zip(sections,starts,starts[1:]):
             assert set(answer)<=set(o['id'] for o in opts)
             assert len(answer)==1 if kind=='single' else len(answer)>1
             questions.append({'id':f'c{ci}-{kind}-{q["number"]}','chapter':ci,'number':q['number'],'type':kind,'prompt':re.sub(r'\s+',' ',txt[:matches[0].start()]).strip(),'options':opts,'answer':list(answer)})
-bank={'version':1,'title':'思想道德与法治','source':Path(sys.argv[1]).name,'chapters':[{'id':i,'title':t,'subtitle':s} for i,t,s in sections],'questions':questions}
+bank={'version':2,'title':'思想道德与法治','source':Path(sys.argv[1]).name,'chapters':[{'id':i,'title':t,'subtitle':s} for i,t,s in sections],'questions':questions}
 (root/'data/questions.json').write_text(json.dumps(bank,ensure_ascii=False,indent=2)+'\n')
 print(f'Imported and validated {len(questions)} questions')

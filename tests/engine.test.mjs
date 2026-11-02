@@ -1,17 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {makeSession,nextRecord,isCorrect,addRetry,DAY} from '../engine.js';
+import {makeSession,nextRecord,isCorrect,addRetry,DAY,upgradeSessions,questionTypeLabel,answerLabel} from '../engine.js';
 const bank=JSON.parse(readFileSync(new URL('../data/questions.json',import.meta.url)));
-test('all 203 questions have complete options and matching reference answer types',()=>{
- assert.equal(bank.questions.length,203);assert.equal(new Set(bank.questions.map(q=>q.id)).size,203);
- for(const q of bank.questions){assert.ok(q.prompt);assert.ok(q.options.length>=4);assert.ok(q.options.every(o=>o.text));assert.ok(q.answer.every(a=>q.options.some(o=>o.id===a)));assert.ok(q.type==='single'?q.answer.length===1:q.answer.length>1);}
- assert.deepEqual(bank.chapters.map(c=>bank.questions.filter(q=>q.chapter===c.id).length),[57,78,68]);
+test('all 264 questions have complete options and matching reference answer types',()=>{
+ assert.equal(bank.questions.length,264);assert.equal(new Set(bank.questions.map(q=>q.id)).size,264);
+ for(const q of bank.questions){assert.ok(q.prompt);assert.ok(q.type==='judge'?q.options.length===2:q.options.length>=4);assert.ok(q.options.every(o=>o.text));assert.ok(q.answer.every(a=>q.options.some(o=>o.id===a)));assert.ok(q.type!=='multiple'?q.answer.length===1:q.answer.length>1);}
+ assert.deepEqual(bank.chapters.map(c=>bank.questions.filter(q=>q.chapter===c.id).length),[68,105,91]);
 });
-test('continuous learning includes all 203 questions in groups of three, interleaving old questions',()=>{
- const s=makeSession(bank.questions,{});assert.equal(s.queue.filter(t=>t.kind==='learn').length,203);
+test('continuous learning includes all 264 questions in groups of three, interleaving old questions',()=>{
+ const s=makeSession(bank.questions,{});assert.equal(s.queue.filter(t=>t.kind==='learn').length,264);
  assert.deepEqual(s.queue.slice(0,3).map(t=>t.kind),['learn','learn','learn']);
- assert.equal(s.queue.filter(t=>t.kind==='quiz'&&t.review).length,134);
+ assert.equal(s.queue.filter(t=>t.kind==='quiz'&&t.review).length,174);
  const learned=new Set();for(const t of s.queue){if(t.kind==='learn')learned.add(t.id);else assert.ok(learned.has(t.id));}
 });
 test('multiple choice requires exactly the correct set',()=>{
@@ -40,4 +40,26 @@ test('chapter sessions include the entire chosen chapter and never mix chapters'
 });
 test('isolated final wrong answer is deferred instead of repeated immediately',()=>{
  const s={queue:[],tries:{x:1},total:1};addRetry(s,'x');assert.equal(s.queue.length,0);
+});
+test('61 judgment answers match each original chapter answer key',()=>{
+ const expected=['BAAAAABAAAB','AABAABABAAAAAAABBAAABAAABBA','BBAAAAAAABBABAAAAABAABB'];
+ for(const c of bank.chapters){const qs=bank.questions.filter(q=>q.chapter===c.id&&q.type==='judge');assert.equal(qs.map(q=>q.answer[0]).join(''),expected[c.id]);for(const q of qs){assert.equal(questionTypeLabel(q.type),'判断题');assert.ok(['正确','错误'].includes(answerLabel(q,q.answer)));assert.ok(isCorrect(q,q.answer));assert.equal(isCorrect(q,['A','B']),false);assert.equal(isCorrect(q,[q.answer[0]==='A'?'B':'A']),false);}}
+});
+test('V1 upgrade preserves current quiz, progress, selection and feedback and appends judgment questions once',()=>{
+ const old=bank.questions.filter(q=>q.type!=='judge');
+ const active=makeSession(old,{}, {chapter:0});const parked=makeSession(old,{}, {chapter:1});
+ active.selected=['B'];active.feedback={correct:false,certain:true};
+ const first=active.queue[0];const progress={[old[0].id]:{seen:true,stage:2,due:12345}};
+ const state={version:1,progress,session:active,sessions:{'1-learn':parked}};
+ upgradeSessions(state,bank.questions,bank.version);
+ assert.equal(state.session.queue[0],first);assert.equal(state.progress,progress);assert.deepEqual(active.selected,['B']);assert.deepEqual(active.feedback,{correct:false,certain:true});
+ assert.equal(active.queue.filter(t=>t.kind==='learn'&&t.id.includes('-judge-')).length,11);
+ assert.equal(parked.queue.filter(t=>t.kind==='learn'&&t.id.includes('-judge-')).length,27);
+ const n=active.queue.length;upgradeSessions(state,bank.questions,bank.version);assert.equal(active.queue.length,n);
+});
+test('new judgment questions use existing due and mistake review scheduling',()=>{
+ const q=bank.questions.find(q=>q.type==='judge'),p={[q.id]:nextRecord({},false,true,1000)};
+ assert.equal(makeSession(bank.questions,p,{chapter:0,mode:'mistakes'}).queue[0].id,q.id);
+ assert.equal(makeSession(bank.questions,p,{chapter:0,mode:'review',now:1000}).queue[0].id,q.id);
+ const good=nextRecord(p[q.id],true,true,2000);assert.equal(good.needsWork,false);assert.equal(good.due,2000+DAY);
 });

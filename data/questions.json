@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "title": "思想道德与法治",
   "source": "《思想道德与法治》2026期中考试复习题(1).docx",
   "chapters": [
@@ -1728,6 +1728,226 @@
         "C",
         "D",
         "E"
+      ]
+    },
+    {
+      "id": "c0-judge-1",
+      "chapter": 0,
+      "number": 1,
+      "type": "judge",
+      "prompt": "“思想道德与法治”课的逻辑主线是科学文化知识。 ( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c0-judge-2",
+      "chapter": 0,
+      "number": 2,
+      "type": "judge",
+      "prompt": "“思想道德与法治”针对大学生成长过程中面临的思想道德和法律问题，开展马克思主义的世界观、人生观、价值观、道德观、法治观教育， 引导大学生提高思想道德素质和法治素养。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-3",
+      "chapter": 0,
+      "number": 3,
+      "type": "judge",
+      "prompt": "《思想道德与法治》是一门融思想性、 政治性、科学性、理论性、实践性于一体的思想政治理论课。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-4",
+      "chapter": 0,
+      "number": 4,
+      "type": "judge",
+      "prompt": "人的本质是一切社会关系的总和。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-5",
+      "chapter": 0,
+      "number": 5,
+      "type": "judge",
+      "prompt": "思想道德素质是促进个体健康成长、社会发展进步的重要保障。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-6",
+      "chapter": 0,
+      "number": 6,
+      "type": "judge",
+      "prompt": "法治素养对于保证人们尊崇法治、遵守法律具有重要的意义。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-7",
+      "chapter": 0,
+      "number": 7,
+      "type": "judge",
+      "prompt": "健全的法律不需要转化为人们内心自觉就能真正为人们所遵行。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c0-judge-8",
+      "chapter": 0,
+      "number": 8,
+      "type": "judge",
+      "prompt": "我们所处的新时代，是中国特色社会主义新时代。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-9",
+      "chapter": 0,
+      "number": 9,
+      "type": "judge",
+      "prompt": "中国特色社会主义是党带领人民历经千辛万苦找到的实现中国梦的正确道路。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-10",
+      "chapter": 0,
+      "number": 10,
+      "type": "judge",
+      "prompt": "思想道德和法律都具有规范社会行为、调节社会关系、维护社会秩序的作用，在国家治理中都有地位和功能。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c0-judge-11",
+      "chapter": 0,
+      "number": 11,
+      "type": "judge",
+      "prompt": "大学生应树立“梦想从学习开始，事业靠梦想成就”的观念。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
       ]
     },
     {
@@ -4093,6 +4313,546 @@
       ]
     },
     {
+      "id": "c1-judge-1",
+      "chapter": 1,
+      "number": 1,
+      "type": "judge",
+      "prompt": "社会需要是个人需要的集中体现，是社会全体成员带有根本性、全局性、长远性需要的反映。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-2",
+      "chapter": 1,
+      "number": 2,
+      "type": "judge",
+      "prompt": "一个人从来到人世的那天起，就从属于一定的社会群体。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-3",
+      "chapter": 1,
+      "number": 3,
+      "type": "judge",
+      "prompt": "没有社会价值，人生的自我价值也可存在。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-4",
+      "chapter": 1,
+      "number": 4,
+      "type": "judge",
+      "prompt": "一个人确立了服务人民、奉献社会的人生追求，才能清楚地把握人的生命历程和奋斗目标，深刻理解人为了什么而活、应走什么样的人生之路等道理。",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-5",
+      "chapter": 1,
+      "number": 5,
+      "type": "judge",
+      "prompt": "只有在实践中才能创造有价值的人生。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-6",
+      "chapter": 1,
+      "number": 6,
+      "type": "judge",
+      "prompt": "个人的需要和社会的需要没有统一性。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-7",
+      "chapter": 1,
+      "number": 7,
+      "type": "judge",
+      "prompt": "评价人生价值的根本尺度就是看一个人的实践活动是否符合社会发展的客观规律，是否促进了历史的进步。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-8",
+      "chapter": 1,
+      "number": 8,
+      "type": "judge",
+      "prompt": "失恋后“看破红尘”是成熟的表现，是现实的人生态度。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-9",
+      "chapter": 1,
+      "number": 9,
+      "type": "judge",
+      "prompt": "价值观是人们关于什么是价值、怎样评判价值、如何创造价值等问题的根本观点。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-10",
+      "chapter": 1,
+      "number": 10,
+      "type": "judge",
+      "prompt": "人民群众是历史的创造者，是国家的主人。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-11",
+      "chapter": 1,
+      "number": 11,
+      "type": "judge",
+      "prompt": "个人利益的得失只能部分地衡量人生价值的大小，在奉献社会中才能实现更大的人生价值。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-12",
+      "chapter": 1,
+      "number": 12,
+      "type": "judge",
+      "prompt": "我们要坚决反对享乐主义，但是并不反对人们在辛勤劳动之后适度享受生活。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-13",
+      "chapter": 1,
+      "number": 13,
+      "type": "judge",
+      "prompt": "人生的价值同时表现为两个方面，一方面表现为个人对社会和他人的责任、义务和奉献，另一方面，表现为个人从社会和他人那里得到尊重和各种需要的满足。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-14",
+      "chapter": 1,
+      "number": 14,
+      "type": "judge",
+      "prompt": "当代大学生的人生价值观应与社会主义核心价值观相一致。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-15",
+      "chapter": 1,
+      "number": 15,
+      "type": "judge",
+      "prompt": "个人与社会的关系，归根结底是个人利益与社会利益的关系。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-16",
+      "chapter": 1,
+      "number": 16,
+      "type": "judge",
+      "prompt": "只有顺境才有利于人的进步与发展，逆境始终不利于人的发展。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-17",
+      "chapter": 1,
+      "number": 17,
+      "type": "judge",
+      "prompt": "尊重自己就是把满足个人自身的需要作为最终目的。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-18",
+      "chapter": 1,
+      "number": 18,
+      "type": "judge",
+      "prompt": "人生价值评价的基本标准是劳动和贡献。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-19",
+      "chapter": 1,
+      "number": 19,
+      "type": "judge",
+      "prompt": "世界观决定人生观，人生观从属于世界观。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-20",
+      "chapter": 1,
+      "number": 20,
+      "type": "judge",
+      "prompt": "个人拥有金钱的多少不能作为衡量人生价值的标准。 （ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-21",
+      "chapter": 1,
+      "number": 21,
+      "type": "judge",
+      "prompt": "人生的自我价值能否实现与社会价值没有任何关系。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-22",
+      "chapter": 1,
+      "number": 22,
+      "type": "judge",
+      "prompt": "人生的社会价值是社会生存发展的重要条件。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-23",
+      "chapter": 1,
+      "number": 23,
+      "type": "judge",
+      "prompt": "人生的自我价值是个体生存发展的必要条件。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-24",
+      "chapter": 1,
+      "number": 24,
+      "type": "judge",
+      "prompt": "人生价值制约着人生目的和人生态度的选择。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c1-judge-25",
+      "chapter": 1,
+      "number": 25,
+      "type": "judge",
+      "prompt": "一个人对自己个体物质和精神需要以怎样的方式和在多大程度上得到满足与社会没有关系。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-26",
+      "chapter": 1,
+      "number": 26,
+      "type": "judge",
+      "prompt": "个体的人生活动只需要具有满足自我需要的价值属性即可，没必要具有满足社会需要的价值属性。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c1-judge-27",
+      "chapter": 1,
+      "number": 27,
+      "type": "judge",
+      "prompt": "认识人的本质，只能立足于具体的、历史的社会关系中从事社会实践的人，而不能从抽象的人性论出发。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
       "id": "c2-single-1",
       "chapter": 2,
       "number": 1,
@@ -6137,6 +6897,466 @@
         "A",
         "B",
         "C"
+      ]
+    },
+    {
+      "id": "c2-judge-1",
+      "chapter": 2,
+      "number": 1,
+      "type": "judge",
+      "prompt": "从理想的性质上划分，理想可分为个人理想和社会理想。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-2",
+      "chapter": 2,
+      "number": 2,
+      "type": "judge",
+      "prompt": "信念是一种单纯的知识和想法。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-3",
+      "chapter": 2,
+      "number": 3,
+      "type": "judge",
+      "prompt": "信念是人们在一定的认识基础上确立的对某种思想或事物坚信不疑并身体力行的心理态度和精神状态。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-4",
+      "chapter": 2,
+      "number": 4,
+      "type": "judge",
+      "prompt": "在一定的社会中，人们的信念具有多样性，也有共通之处。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-5",
+      "chapter": 2,
+      "number": 5,
+      "type": "judge",
+      "prompt": "实践产生理想，理想指引实践，理想与实践相互作用、不断循环上升的过程，推动人们立足现实、着眼未来，在奋斗中追求，在追求中奋斗。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-6",
+      "chapter": 2,
+      "number": 6,
+      "type": "judge",
+      "prompt": "理想之所以能够成为一种推动人们创造美好生活的巨大力量，就在于它不仅具有现实性而且具有预见性。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-7",
+      "chapter": 2,
+      "number": 7,
+      "type": "judge",
+      "prompt": "凡是符合客观事物发展规律、反映人民群众根本利益的理想，是科学的理想；反之，是非科学的理想。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-8",
+      "chapter": 2,
+      "number": 8,
+      "type": "judge",
+      "prompt": "中国特色社会主义这一共同理想指引我们在改革开放以来取得了非常了不起的成绩和进步。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-9",
+      "chapter": 2,
+      "number": 9,
+      "type": "judge",
+      "prompt": "坚定的理想信念，必须建立在对马克思主义的深刻理解上，建立在对历史规律的深刻把握上。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-10",
+      "chapter": 2,
+      "number": 10,
+      "type": "judge",
+      "prompt": "信念是理想所指的对象，理想是信念实现的保障。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-11",
+      "chapter": 2,
+      "number": 11,
+      "type": "judge",
+      "prompt": "社会理想的实现，必须以个人理想的实现为前提和基础。（ ）",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-12",
+      "chapter": 2,
+      "number": 12,
+      "type": "judge",
+      "prompt": "中国特色社会主义是当代中国发展进步的根本方向，是发展中国、稳定中国的必由之路。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-13",
+      "chapter": 2,
+      "number": 13,
+      "type": "judge",
+      "prompt": "信念有着绝对的稳定性。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-14",
+      "chapter": 2,
+      "number": 14,
+      "type": "judge",
+      "prompt": "一个人的理想信念越崇高、越坚定，精神境界和人格就会越高尚。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-15",
+      "chapter": 2,
+      "number": 15,
+      "type": "judge",
+      "prompt": "科学的理想是人的主观能动性与社会发展客观趋势的一致性的反映。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-16",
+      "chapter": 2,
+      "number": 16,
+      "type": "judge",
+      "prompt": "信念是认知、情感和意志的有机统一体，是人们在一定的认识基础上确立的对某种思想或事物坚信不疑并身体力行的心理态度和精神状态。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-17",
+      "chapter": 2,
+      "number": 17,
+      "type": "judge",
+      "prompt": "个人理想与社会理想的关系实质上是个人与社会的关系在理想层面上的反映。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-18",
+      "chapter": 2,
+      "number": 18,
+      "type": "judge",
+      "prompt": "强调个人理想要符合社会理想，并不是要排斥和抹杀个人理想，而是要摆正个人理想同社会理想的关系。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-19",
+      "chapter": 2,
+      "number": 19,
+      "type": "judge",
+      "prompt": "理想在现实中产生，与未来奋斗目标没有联系。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-20",
+      "chapter": 2,
+      "number": 20,
+      "type": "judge",
+      "prompt": "马克思主义具有与时俱进的理论品格和持久的生命力。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-21",
+      "chapter": 2,
+      "number": 21,
+      "type": "judge",
+      "prompt": "当代大学生肩负的历史使命是坚持和发展中国特色社会主义、实现中华民族伟大复兴的中国梦。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "A"
+      ]
+    },
+    {
+      "id": "c2-judge-22",
+      "chapter": 2,
+      "number": 22,
+      "type": "judge",
+      "prompt": "理想信念是一个思想认识问题，而不是一个实践问题。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
+      ]
+    },
+    {
+      "id": "c2-judge-23",
+      "chapter": 2,
+      "number": 23,
+      "type": "judge",
+      "prompt": "理想仅有现实性而没有任何预见性。( )",
+      "options": [
+        {
+          "id": "A",
+          "text": "正确"
+        },
+        {
+          "id": "B",
+          "text": "错误"
+        }
+      ],
+      "answer": [
+        "B"
       ]
     }
   ]
