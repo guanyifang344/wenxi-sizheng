@@ -1,4 +1,4 @@
-import {makeSession, isCorrect, nextRecord, addRetry, upgradeSessions, questionTypeLabel, answerLabel} from './engine.js';
+import {makeSession, isCorrect, nextRecord, addRetry, upgradeSessions, questionTypeLabel, answerLabel} from './engine.js?v=1.1';
 const KEY = 'wenxi-sizheng-v1';
 const main = document.querySelector('#main');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -127,7 +127,7 @@ document.addEventListener('change',async e=>{
   try{const file=e.target.files[0];if(!file)return;if(file.size>2000000)throw Error();const parsed=JSON.parse(await file.text());if(!validState(parsed))throw Error();if(!confirm('恢复备份将替换当前浏览器的学习进度，是否继续？'))return;state=upgradeSessions(parsed,bank.questions,bank.version);save();render();notice('学习进度已恢复。');}catch{notice('无法读取这份备份，请选择本站导出的有效进度文件。');}
 });
 try {
-  const res=await fetch('./data/questions.json');if(!res.ok)throw Error('题库读取失败');bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
+  const res=await fetch('./data/questions.json?v=1.1', {cache:'no-cache'});if(!res.ok)throw Error('题库读取失败');bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
   try{const saved=localStorage.getItem(KEY);if(saved){const parsed=JSON.parse(saved);if(validState(parsed))state=parsed;else notice('旧进度格式无法识别，暂未覆盖原数据。请先备份浏览器中的旧数据。');}}catch{notice('无法读取已保存的进度；本次仍可继续学习。');}
   if(state.session&&state.session.chapter===null){state.session=null;save();}
   upgradeSessions(state,bank.questions,bank.version);
