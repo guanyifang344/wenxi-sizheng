@@ -1,0 +1,4803 @@
+{
+  "subject": "python",
+  "version": 1,
+  "title": "Python 入门",
+  "chapters": [
+    {
+      "id": 0,
+      "course": 4,
+      "title": "Course 04",
+      "subtitle": "Variables and Types",
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": 1,
+      "course": 5,
+      "title": "Course 05",
+      "subtitle": "Operators and Booleans",
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": 2,
+      "course": 6,
+      "title": "Course 06",
+      "subtitle": "Making Decisions",
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": 3,
+      "course": 7,
+      "title": "Course 07",
+      "subtitle": "for Loops",
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": 4,
+      "course": 8,
+      "title": "Course 08",
+      "subtitle": "while Loops",
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": 5,
+      "course": 9,
+      "title": "Course 09",
+      "subtitle": "Reading Errors & Debugging",
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": 6,
+      "course": 14,
+      "title": "Course 14",
+      "subtitle": "Strings",
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": 7,
+      "course": 15,
+      "title": "Course 15",
+      "subtitle": "Lists",
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": 8,
+      "course": 16,
+      "title": "Course 16",
+      "subtitle": "Dictionaries",
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": 9,
+      "course": 17,
+      "title": "Course 17",
+      "subtitle": "Functions I",
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": 10,
+      "course": 18,
+      "title": "Course 18",
+      "subtitle": "Functions II",
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": 11,
+      "course": 19,
+      "title": "Course 19",
+      "subtitle": "import and files",
+      "source": "course_19_quiz.md"
+    }
+  ],
+  "questions": [
+    {
+      "id": "py-04-1",
+      "chapter": 0,
+      "number": 1,
+      "type": "single",
+      "prompt": "In Python, what does the `=` sign do?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Python, what does the `=` sign do?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It checks whether two values are equal"
+        },
+        {
+          "id": "B",
+          "text": "It compares a variable with a number"
+        },
+        {
+          "id": "C",
+          "text": "It puts the value on the right into the name on the left"
+        },
+        {
+          "id": "D",
+          "text": "It checks the type of the value"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-2",
+      "chapter": 0,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nscore = 12\nscore = 25\nprint(score)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "score = 12\nscore = 25\nprint(score)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "12"
+        },
+        {
+          "id": "B",
+          "text": "25"
+        },
+        {
+          "id": "C",
+          "text": "37"
+        },
+        {
+          "id": "D",
+          "text": "SyntaxError"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-3",
+      "chapter": 0,
+      "number": 3,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\na = 3\nb = a\na = 30\nprint(b)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "a = 3\nb = a\na = 30\nprint(b)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "30"
+        },
+        {
+          "id": "B",
+          "text": "33"
+        },
+        {
+          "id": "C",
+          "text": "NameError: name 'b' is not defined"
+        },
+        {
+          "id": "D",
+          "text": "3"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-4",
+      "chapter": 0,
+      "number": 4,
+      "type": "single",
+      "prompt": "What is the type of the value `\"18\"`?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is the type of the value `\"18\"`?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`int`"
+        },
+        {
+          "id": "B",
+          "text": "`float`"
+        },
+        {
+          "id": "C",
+          "text": "`str`"
+        },
+        {
+          "id": "D",
+          "text": "`bool`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-5",
+      "chapter": 0,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nprice = 12.0\nprint(type(price))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "price = 12.0\nprint(type(price))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`<class 'float'>`"
+        },
+        {
+          "id": "B",
+          "text": "`<class 'int'>`"
+        },
+        {
+          "id": "C",
+          "text": "`<class 'str'>`"
+        },
+        {
+          "id": "D",
+          "text": "`12.0`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-6",
+      "chapter": 0,
+      "number": 6,
+      "type": "single",
+      "prompt": "What does `input()` always give back?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does `input()` always give back?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "An `int` if the user types digits"
+        },
+        {
+          "id": "B",
+          "text": "A `float` when there is a decimal point"
+        },
+        {
+          "id": "C",
+          "text": "Whichever type Python thinks is right"
+        },
+        {
+          "id": "D",
+          "text": "A `str`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-7",
+      "chapter": 0,
+      "number": 7,
+      "type": "single",
+      "prompt": "The user types `20`. What happens?\n\n```python\nage = input(\"Your age: \")\nprint(age + 1)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user types `20`. What happens?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "age = input(\"Your age: \")\nprint(age + 1)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`TypeError: can only concatenate str (not \"int\") to str`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `21`"
+        },
+        {
+          "id": "C",
+          "text": "It prints `201`"
+        },
+        {
+          "id": "D",
+          "text": "`TypeError: unsupported operand type(s) for +: 'int' and 'str'`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-8",
+      "chapter": 0,
+      "number": 8,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nname = \"Xiaoming\"\nprint(\"Welcome {name}\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "name = \"Xiaoming\"\nprint(\"Welcome {name}\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Welcome Xiaoming"
+        },
+        {
+          "id": "B",
+          "text": "Welcome {name}"
+        },
+        {
+          "id": "C",
+          "text": "SyntaxError: invalid syntax"
+        },
+        {
+          "id": "D",
+          "text": "NameError: name 'name' is not defined"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-9",
+      "chapter": 0,
+      "number": 9,
+      "type": "single",
+      "prompt": "What does this code print, on two lines?\n\n```python\nprice = 7.6\nprint(int(price))\nprint(price)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print, on two lines?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "price = 7.6\nprint(int(price))\nprint(price)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "8 then 7.6"
+        },
+        {
+          "id": "B",
+          "text": "8 then 8"
+        },
+        {
+          "id": "C",
+          "text": "7 then 7.6"
+        },
+        {
+          "id": "D",
+          "text": "7 then 7"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-04-10",
+      "chapter": 0,
+      "number": 10,
+      "type": "single",
+      "prompt": "Which line raises `ValueError: invalid literal for int() with base 10: '3.5'`?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which line raises `ValueError: invalid literal for int() with base 10: '3.5'`?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`int(\"3.5\")`"
+        },
+        {
+          "id": "B",
+          "text": "`int(3.5)`"
+        },
+        {
+          "id": "C",
+          "text": "`float(\"3.5\")`"
+        },
+        {
+          "id": "D",
+          "text": "`str(3.5)`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_04_quiz.md"
+    },
+    {
+      "id": "py-05-1",
+      "chapter": 1,
+      "number": 1,
+      "type": "single",
+      "prompt": "In Python, what does a comparison such as `5 > 3` give you?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In Python, what does a comparison such as `5 > 3` give you?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The text `\"True\"`"
+        },
+        {
+          "id": "B",
+          "text": "A `bool`: `True` or `False`"
+        },
+        {
+          "id": "C",
+          "text": "The number `1`"
+        },
+        {
+          "id": "D",
+          "text": "Nothing — `>` only stores a value"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-2",
+      "chapter": 1,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does this line print?\n\n```python\nprint(9 / 3)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this line print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(9 / 3)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`3`"
+        },
+        {
+          "id": "B",
+          "text": "`3.3333333333333335`"
+        },
+        {
+          "id": "C",
+          "text": "`0.3`"
+        },
+        {
+          "id": "D",
+          "text": "`3.0`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-3",
+      "chapter": 1,
+      "number": 3,
+      "type": "single",
+      "prompt": "What does this program print?\n\n```python\nprint(47 // 10)\nprint(47 % 10)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this program print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(47 // 10)\nprint(47 % 10)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`4` then `7`"
+        },
+        {
+          "id": "B",
+          "text": "`7` then `4`"
+        },
+        {
+          "id": "C",
+          "text": "`4` then `0.7`"
+        },
+        {
+          "id": "D",
+          "text": "`4.7` then `4.7`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-4",
+      "chapter": 1,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does this program print?\n\n```python\ntotal = 10\ntotal += 5\ntotal += 5\nprint(total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this program print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "total = 10\ntotal += 5\ntotal += 5\nprint(total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`10`"
+        },
+        {
+          "id": "B",
+          "text": "`15`"
+        },
+        {
+          "id": "C",
+          "text": "`20`"
+        },
+        {
+          "id": "D",
+          "text": "`25`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-5",
+      "chapter": 1,
+      "number": 5,
+      "type": "single",
+      "prompt": "Which line asks a question instead of storing a value?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which line asks a question instead of storing a value?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`price = 12`"
+        },
+        {
+          "id": "B",
+          "text": "`price == 12`"
+        },
+        {
+          "id": "C",
+          "text": "`price += 12`"
+        },
+        {
+          "id": "D",
+          "text": "`price = price + 12`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-6",
+      "chapter": 1,
+      "number": 6,
+      "type": "single",
+      "prompt": "Which expression is `True` only when `n` is an even number?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which expression is `True` only when `n` is an even number?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`n // 2 == 0`"
+        },
+        {
+          "id": "B",
+          "text": "`n / 2 == 0`"
+        },
+        {
+          "id": "C",
+          "text": "`n % 2 == 1`"
+        },
+        {
+          "id": "D",
+          "text": "`n % 2 == 0`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-7",
+      "chapter": 1,
+      "number": 7,
+      "type": "single",
+      "prompt": "What does this line print?\n\n```python\nprint(7 > 2 and 3 > 9)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this line print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(7 > 2 and 3 > 9)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`False`"
+        },
+        {
+          "id": "B",
+          "text": "`True`"
+        },
+        {
+          "id": "C",
+          "text": "`5 > 3`"
+        },
+        {
+          "id": "D",
+          "text": "`SyntaxError: invalid syntax`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-8",
+      "chapter": 1,
+      "number": 8,
+      "type": "single",
+      "prompt": "What happens when you run this line?\n\n```python\nprint(True && False)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when you run this line?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(True && False)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `False`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `True`"
+        },
+        {
+          "id": "C",
+          "text": "`SyntaxError: invalid syntax`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `0`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-9",
+      "chapter": 1,
+      "number": 9,
+      "type": "single",
+      "prompt": "The user types `20` and this program stops. Which change fixes it?\n\n```python\nage = input(\"Your age: \")\nprint(age >= 18)\n```\n\n```\nTypeError: '>=' not supported between instances of 'str' and 'int'\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user types `20` and this program stops. Which change fixes it?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "age = input(\"Your age: \")\nprint(age >= 18)"
+        },
+        {
+          "type": "code",
+          "language": "",
+          "text": "TypeError: '>=' not supported between instances of 'str' and 'int'"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`print(age > 18)`"
+        },
+        {
+          "id": "B",
+          "text": "`age = int(input(\"Your age: \"))`"
+        },
+        {
+          "id": "C",
+          "text": "`age = str(input(\"Your age: \"))`"
+        },
+        {
+          "id": "D",
+          "text": "`age = input(int(\"Your age: \"))`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-05-10",
+      "chapter": 1,
+      "number": 10,
+      "type": "single",
+      "prompt": "What happens when you run this line?\n\n```python\nprint(12 % 0)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when you run this line?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(12 % 0)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `0`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `47`"
+        },
+        {
+          "id": "C",
+          "text": "It prints `None`"
+        },
+        {
+          "id": "D",
+          "text": "The program stops with a `ZeroDivisionError`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_05_quiz.md"
+    },
+    {
+      "id": "py-06-1",
+      "chapter": 2,
+      "number": 1,
+      "type": "single",
+      "prompt": "What does the keyword `if` do in Python?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the keyword `if` do in Python?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It repeats a block of code several times."
+        },
+        {
+          "id": "B",
+          "text": "It runs a block only when a condition is true."
+        },
+        {
+          "id": "C",
+          "text": "It stores a value inside a variable."
+        },
+        {
+          "id": "D",
+          "text": "It changes text into a number."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-2",
+      "chapter": 2,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nsugar = 30\nif sugar > 30:\n    print(\"Sweet\")\nelse:\n    print(\"Light\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "sugar = 30\nif sugar > 30:\n    print(\"Sweet\")\nelse:\n    print(\"Light\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Sweet"
+        },
+        {
+          "id": "B",
+          "text": "Sweet then Light"
+        },
+        {
+          "id": "C",
+          "text": "Light"
+        },
+        {
+          "id": "D",
+          "text": "Nothing is printed"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-3",
+      "chapter": 2,
+      "number": 3,
+      "type": "single",
+      "prompt": "What does Python 3.12 print here?\n\n```python\nscore = 75\nif score > 60\n    print(\"Pass\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does Python 3.12 print here?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "score = 75\nif score > 60\n    print(\"Pass\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`IndentationError: expected an indented block after 'if' statement on line 2`"
+        },
+        {
+          "id": "B",
+          "text": "`SyntaxError: expected ':'`"
+        },
+        {
+          "id": "C",
+          "text": "`TypeError: '>' not supported between instances of 'str' and 'int'`"
+        },
+        {
+          "id": "D",
+          "text": "The code runs and prints Pass"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-4",
+      "chapter": 2,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nscore = 70\nif score > 80:\n    print(\"A\")\nif score > 60:\n    print(\"B\")\nif score > 40:\n    print(\"C\")\nprint(\"D\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "score = 70\nif score > 80:\n    print(\"A\")\nif score > 60:\n    print(\"B\")\nif score > 40:\n    print(\"C\")\nprint(\"D\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "A then B then C"
+        },
+        {
+          "id": "B",
+          "text": "A then B"
+        },
+        {
+          "id": "C",
+          "text": "B then C then D"
+        },
+        {
+          "id": "D",
+          "text": "C then D"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-5",
+      "chapter": 2,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nbudget = 25\nif budget >= 30:\n    print(\"Hot pot\")\nelif budget >= 15:\n    print(\"Noodles\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "budget = 25\nif budget >= 30:\n    print(\"Hot pot\")\nelif budget >= 15:\n    print(\"Noodles\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Noodles"
+        },
+        {
+          "id": "B",
+          "text": "Hot pot"
+        },
+        {
+          "id": "C",
+          "text": "Hot pot then Noodles"
+        },
+        {
+          "id": "D",
+          "text": "Nothing is printed"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-6",
+      "chapter": 2,
+      "number": 6,
+      "type": "single",
+      "prompt": "Xiaoming scored 88. What does this code print?\n\n```python\nscore = 88\nif score >= 50:\n    print(\"C\")\nelif score >= 80:\n    print(\"A\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Xiaoming scored 88. What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "score = 88\nif score >= 50:\n    print(\"C\")\nelif score >= 80:\n    print(\"A\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "A"
+        },
+        {
+          "id": "B",
+          "text": "C then A"
+        },
+        {
+          "id": "C",
+          "text": "C"
+        },
+        {
+          "id": "D",
+          "text": "It stops with a `SyntaxError`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-7",
+      "chapter": 2,
+      "number": 7,
+      "type": "single",
+      "prompt": "In an `if` / `elif` / `else` chain, which branch runs?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In an `if` / `elif` / `else` chain, which branch runs?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Every branch whose condition is true."
+        },
+        {
+          "id": "B",
+          "text": "The first branch whose condition is true."
+        },
+        {
+          "id": "C",
+          "text": "The last branch whose condition is true."
+        },
+        {
+          "id": "D",
+          "text": "The branch with the strictest condition."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-8",
+      "chapter": 2,
+      "number": 8,
+      "type": "single",
+      "prompt": "What does Python 3.12 print here?\n\n```python\nprice = 15\nif price = 15:\n    print(\"Enough.\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does Python 3.12 print here?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "price = 15\nif price = 15:\n    print(\"Enough.\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?`"
+        },
+        {
+          "id": "B",
+          "text": "`SyntaxError: expected ':'`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'price' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "The code runs and prints Enough."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-9",
+      "chapter": 2,
+      "number": 9,
+      "type": "single",
+      "prompt": "The user types 170. What happens?\n\n```python\nheight = input(\"Your height in cm: \")\nif height > 160:\n    print(\"Tall enough for the ride.\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user types 170. What happens?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "height = input(\"Your height in cm: \")\nif height > 160:\n    print(\"Tall enough for the ride.\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints Tall enough for the ride."
+        },
+        {
+          "id": "B",
+          "text": "It prints nothing and ends normally."
+        },
+        {
+          "id": "C",
+          "text": "`IndentationError: expected an indented block after 'if' statement on line 2`"
+        },
+        {
+          "id": "D",
+          "text": "`TypeError: '>' not supported between instances of 'str' and 'int'`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-06-10",
+      "chapter": 2,
+      "number": 10,
+      "type": "single",
+      "prompt": "What does this code print?\n\n```python\nmoney = 20\nanswer = \"Yes\"\nif money >= 12 and answer == \"yes\":\n    print(\"Milk tea\")\nprint(\"Done\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does this code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "money = 20\nanswer = \"Yes\"\nif money >= 12 and answer == \"yes\":\n    print(\"Milk tea\")\nprint(\"Done\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Milk tea then Done"
+        },
+        {
+          "id": "B",
+          "text": "Milk tea"
+        },
+        {
+          "id": "C",
+          "text": "Done"
+        },
+        {
+          "id": "D",
+          "text": "Nothing is printed"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_06_quiz.md"
+    },
+    {
+      "id": "py-07-1",
+      "chapter": 3,
+      "number": 1,
+      "type": "single",
+      "prompt": "What does a `for` loop do in Python?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does a `for` loop do in Python?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It runs a block only when a condition is true."
+        },
+        {
+          "id": "B",
+          "text": "It runs a block once for each value in a sequence."
+        },
+        {
+          "id": "C",
+          "text": "It stores a value inside a variable."
+        },
+        {
+          "id": "D",
+          "text": "It runs a block forever, until you press Ctrl+C."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-2",
+      "chapter": 3,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nfor i in range(3):\n    print(\"Hi\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for i in range(3):\n    print(\"Hi\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Hi` printed three times"
+        },
+        {
+          "id": "B",
+          "text": "`Hi` printed once"
+        },
+        {
+          "id": "C",
+          "text": "`0` `1` `2`"
+        },
+        {
+          "id": "D",
+          "text": "Nothing — `i` is never used"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-3",
+      "chapter": 3,
+      "number": 3,
+      "type": "single",
+      "prompt": "In `for i in range(4):`, which values does `i` take?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In `for i in range(4):`, which values does `i` take?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 3, 4"
+        },
+        {
+          "id": "B",
+          "text": "0, 1, 2, 3, 4"
+        },
+        {
+          "id": "C",
+          "text": "0, 1, 2, 3"
+        },
+        {
+          "id": "D",
+          "text": "4 random values"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-4",
+      "chapter": 3,
+      "number": 4,
+      "type": "single",
+      "prompt": "You want to print the numbers 1 to 10, including 10. Which line is correct?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You want to print the numbers 1 to 10, including 10. Which line is correct?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`for i in range(1, 10):`"
+        },
+        {
+          "id": "B",
+          "text": "`for i in range(1, 11):`"
+        },
+        {
+          "id": "C",
+          "text": "`for i in range(0, 10):`"
+        },
+        {
+          "id": "D",
+          "text": "`for i in range(10):`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-5",
+      "chapter": 3,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nfor letter in \"tea\":\n    print(letter)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for letter in \"tea\":\n    print(letter)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`tea`"
+        },
+        {
+          "id": "B",
+          "text": "`t` `e` `a` on three lines"
+        },
+        {
+          "id": "C",
+          "text": "`letter` three times"
+        },
+        {
+          "id": "D",
+          "text": "`t e a` on one line"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-6",
+      "chapter": 3,
+      "number": 6,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ntotal = 0\nfor i in range(1, 4):\n    total += i\nprint(total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "total = 0\nfor i in range(1, 4):\n    total += i\nprint(total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`3`"
+        },
+        {
+          "id": "B",
+          "text": "`4`"
+        },
+        {
+          "id": "C",
+          "text": "`6`"
+        },
+        {
+          "id": "D",
+          "text": "`10`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-7",
+      "chapter": 3,
+      "number": 7,
+      "type": "single",
+      "prompt": "Which error does the following code produce?\n\n```python\nfor i in range(2):\nprint(\"go\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which error does the following code produce?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for i in range(2):\nprint(\"go\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`SyntaxError: expected ':'`"
+        },
+        {
+          "id": "B",
+          "text": "`IndentationError: expected an indented block after 'for' statement on line 1`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'i' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "No error — it prints `go` twice"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-8",
+      "chapter": 3,
+      "number": 8,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nfor i in range(1, 5):\n    total = 0\n    total += i\nprint(total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for i in range(1, 5):\n    total = 0\n    total += i\nprint(total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`10`"
+        },
+        {
+          "id": "B",
+          "text": "`0`"
+        },
+        {
+          "id": "C",
+          "text": "`4`"
+        },
+        {
+          "id": "D",
+          "text": "`NameError: name 'total' is not defined`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-9",
+      "chapter": 3,
+      "number": 9,
+      "type": "single",
+      "prompt": "How many stars does the following code print?\n\n```python\nfor i in range(2):\n    for j in range(3):\n        print(\"*\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "How many stars does the following code print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for i in range(2):\n    for j in range(3):\n        print(\"*\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "2"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "6"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-07-10",
+      "chapter": 3,
+      "number": 10,
+      "type": "single",
+      "prompt": "What is the FIRST value printed by the following code?\n\n```python\nfor i in range(10, 0, -1):\n    print(i)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is the FIRST value printed by the following code?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for i in range(10, 0, -1):\n    print(i)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`10`"
+        },
+        {
+          "id": "B",
+          "text": "`0`"
+        },
+        {
+          "id": "C",
+          "text": "`-1`"
+        },
+        {
+          "id": "D",
+          "text": "`9`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_07_quiz.md"
+    },
+    {
+      "id": "py-08-1",
+      "chapter": 4,
+      "number": 1,
+      "type": "single",
+      "prompt": "When should you prefer a `while` loop over a `for` loop?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "When should you prefer a `while` loop over a `for` loop?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "When the loop must run faster"
+        },
+        {
+          "id": "B",
+          "text": "When you do not know in advance how many times to repeat"
+        },
+        {
+          "id": "C",
+          "text": "When the loop body contains an `if`"
+        },
+        {
+          "id": "D",
+          "text": "When you loop over a string"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-2",
+      "chapter": 4,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nn = 4\nwhile n > 0:\n    print(n)\n    n -= 1\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "n = 4\nwhile n > 0:\n    print(n)\n    n -= 1"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`4` `3` `2` `1`"
+        },
+        {
+          "id": "B",
+          "text": "`4` `3` `2` `1` `0`"
+        },
+        {
+          "id": "C",
+          "text": "`3` `2` `1` `0`"
+        },
+        {
+          "id": "D",
+          "text": "It never stops"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-3",
+      "chapter": 4,
+      "number": 3,
+      "type": "single",
+      "prompt": "Your program is stuck in an infinite loop. How do you stop it?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Your program is stuck in an infinite loop. How do you stop it?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Close VS Code and restart the computer"
+        },
+        {
+          "id": "B",
+          "text": "Wait — Python stops loops automatically after one minute"
+        },
+        {
+          "id": "C",
+          "text": "Click inside the terminal, then press `Ctrl+C`"
+        },
+        {
+          "id": "D",
+          "text": "Delete the file while it runs"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-4",
+      "chapter": 4,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nfor i in range(10):\n    if i == 4:\n        break\n    print(i)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "for i in range(10):\n    if i == 4:\n        break\n    print(i)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`0` `1` `2` `3` `4`"
+        },
+        {
+          "id": "B",
+          "text": "`0` `1` `2` `3` `5` `6` `7` `8` `9`"
+        },
+        {
+          "id": "C",
+          "text": "`SyntaxError: 'break' outside loop`"
+        },
+        {
+          "id": "D",
+          "text": "`0` `1` `2` `3`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-5",
+      "chapter": 4,
+      "number": 5,
+      "type": "single",
+      "prompt": "A program starts with `while True:`. When is this correct code, not a bug?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A program starts with `while True:`. When is this correct code, not a bug?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Never — `while True:` is always an infinite loop"
+        },
+        {
+          "id": "B",
+          "text": "When there is a `break` inside the loop"
+        },
+        {
+          "id": "C",
+          "text": "When the loop body has fewer than 3 lines"
+        },
+        {
+          "id": "D",
+          "text": "When it is the first loop of the file"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-6",
+      "chapter": 4,
+      "number": 6,
+      "type": "single",
+      "prompt": "You validate a sugar level that must be between 0 and 100. Which loop condition is correct?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You validate a sugar level that must be between 0 and 100. Which loop condition is correct?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`while sugar < 0 or sugar > 100:`"
+        },
+        {
+          "id": "B",
+          "text": "`while sugar < 0 and sugar > 100:`"
+        },
+        {
+          "id": "C",
+          "text": "`while sugar >= 0 or sugar <= 100:`"
+        },
+        {
+          "id": "D",
+          "text": "`while sugar == 0 or sugar == 100:`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-7",
+      "chapter": 4,
+      "number": 7,
+      "type": "single",
+      "prompt": "Can `random.randint(1, 6)` return `6`?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Can `random.randint(1, 6)` return `6`?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "No — like `range`, the last value is excluded"
+        },
+        {
+          "id": "B",
+          "text": "Yes — both ends are included"
+        },
+        {
+          "id": "C",
+          "text": "Only if you write `randint(1, 7)`"
+        },
+        {
+          "id": "D",
+          "text": "No — it returns only even numbers"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-8",
+      "chapter": 4,
+      "number": 8,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\nn = 0\nwhile n < 4:\n    if n == 2:\n        continue\n    print(n)\n    n += 1\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "n = 0\nwhile n < 4:\n    if n == 2:\n        continue\n    print(n)\n    n += 1"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `0 1 3` and stops"
+        },
+        {
+          "id": "B",
+          "text": "It prints `0 1 2 3`"
+        },
+        {
+          "id": "C",
+          "text": "It prints `0 1` then loops forever"
+        },
+        {
+          "id": "D",
+          "text": "`SyntaxError: 'continue' not properly in loop`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-9",
+      "chapter": 4,
+      "number": 9,
+      "type": "single",
+      "prompt": "The user types `2`, then `1`. What happens?\n\n```python\nchoice = input(\"1, 2 or 3? \")\nwhile choice != \"1\" or choice != \"2\" or choice != \"3\":\n    choice = input(\"Please, 1, 2 or 3: \")\nprint(\"OK\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user types `2`, then `1`. What happens?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "choice = input(\"1, 2 or 3? \")\nwhile choice != \"1\" or choice != \"2\" or choice != \"3\":\n    choice = input(\"Please, 1, 2 or 3: \")\nprint(\"OK\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`OK` is printed right after the `2`"
+        },
+        {
+          "id": "B",
+          "text": "`OK` is printed after the `1`"
+        },
+        {
+          "id": "C",
+          "text": "`Please, 1, 2 or 3:` comes back again and again, whatever the user types"
+        },
+        {
+          "id": "D",
+          "text": "`OK` is printed only when the user types `3`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-08-10",
+      "chapter": 4,
+      "number": 10,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nn = 1\ncount = 0\nwhile n < 50:\n    n = n * 3\n    count += 1\n    if n % 2 == 0:\n        break\nprint(n, count)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "n = 1\ncount = 0\nwhile n < 50:\n    n = n * 3\n    count += 1\n    if n % 2 == 0:\n        break\nprint(n, count)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`27 3`"
+        },
+        {
+          "id": "B",
+          "text": "`3 1`"
+        },
+        {
+          "id": "C",
+          "text": "It never stops"
+        },
+        {
+          "id": "D",
+          "text": "`81 4`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_08_quiz.md"
+    },
+    {
+      "id": "py-09-1",
+      "chapter": 5,
+      "number": 1,
+      "type": "single",
+      "prompt": "Where do you start reading a traceback?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Where do you start reading a traceback?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "At the top — the first line"
+        },
+        {
+          "id": "B",
+          "text": "At the bottom — the last line"
+        },
+        {
+          "id": "C",
+          "text": "In the middle"
+        },
+        {
+          "id": "D",
+          "text": "Anywhere — the order does not matter"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-2",
+      "chapter": 5,
+      "number": 2,
+      "type": "single",
+      "prompt": "3 cups at 12 RMB, then 5 RMB off: the right values are 36, then 31. The program prints the spy lines below. Which line has the bug?\n\n```python\nprice = 12\ncups = 3\ntotal = price + cups\nprint(f\"DEBUG total: {total}\")\npay = total - 5\nprint(f\"DEBUG pay: {pay}\")\n# → DEBUG total: 15\n# → DEBUG pay: 10\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "3 cups at 12 RMB, then 5 RMB off: the right values are 36, then 31. The program prints the spy lines below. Which line has the bug?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "price = 12\ncups = 3\ntotal = price + cups\nprint(f\"DEBUG total: {total}\")\npay = total - 5\nprint(f\"DEBUG pay: {pay}\")\n# → DEBUG total: 15\n# → DEBUG pay: 10"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`total = price + cups` — the first wrong value comes from this line"
+        },
+        {
+          "id": "B",
+          "text": "`pay = total - 5` — the last wrong value comes from this line"
+        },
+        {
+          "id": "C",
+          "text": "`print(f\"DEBUG pay: {pay}\")` — it prints 10"
+        },
+        {
+          "id": "D",
+          "text": "Both `total = ...` and `pay = ...` have a bug"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-3",
+      "chapter": 5,
+      "number": 3,
+      "type": "single",
+      "prompt": "The user types `hello` and the program runs `int(input(\"Age: \"))`. Which error appears?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user types `hello` and the program runs `int(input(\"Age: \"))`. Which error appears?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`TypeError`"
+        },
+        {
+          "id": "B",
+          "text": "`NameError`"
+        },
+        {
+          "id": "C",
+          "text": "`ValueError`"
+        },
+        {
+          "id": "D",
+          "text": "`SyntaxError`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-4",
+      "chapter": 5,
+      "number": 4,
+      "type": "single",
+      "prompt": "Which TWO errors mean Python never even started running your program?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which TWO errors mean Python never even started running your program?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`TypeError` and `ValueError`"
+        },
+        {
+          "id": "B",
+          "text": "`NameError` and `ZeroDivisionError`"
+        },
+        {
+          "id": "C",
+          "text": "`ValueError` and `IndexError`"
+        },
+        {
+          "id": "D",
+          "text": "`SyntaxError` and `IndentationError`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-5",
+      "chapter": 5,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nsize = \"M\"\nprice = 12\nif size == \"L\" or \"l\":\n    price = price + 3\nprint(price)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "size = \"M\"\nprice = 12\nif size == \"L\" or \"l\":\n    price = price + 3\nprint(price)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`12`"
+        },
+        {
+          "id": "B",
+          "text": "`15`"
+        },
+        {
+          "id": "C",
+          "text": "`TypeError: unsupported operand type(s) for +: 'int' and 'str'`"
+        },
+        {
+          "id": "D",
+          "text": "`SyntaxError: invalid syntax`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-6",
+      "chapter": 5,
+      "number": 6,
+      "type": "single",
+      "prompt": "A variable does not behave as expected. Which spy line tells you the most?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A variable does not behave as expected. Which spy line tells you the most?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`print(f\"DEBUG: {x} {type(x)}\")`"
+        },
+        {
+          "id": "B",
+          "text": "`print(\"here\")`"
+        },
+        {
+          "id": "C",
+          "text": "`print(type)`"
+        },
+        {
+          "id": "D",
+          "text": "`print(\"x\")`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-7",
+      "chapter": 5,
+      "number": 7,
+      "type": "single",
+      "prompt": "Which of these is NOT one of the four pieces of a proper help request?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which of these is NOT one of the four pieces of a proper help request?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "What I am trying to do"
+        },
+        {
+          "id": "B",
+          "text": "What I expected to happen"
+        },
+        {
+          "id": "C",
+          "text": "The exact error message or output"
+        },
+        {
+          "id": "D",
+          "text": "The number of hours I spent on the bug"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-8",
+      "chapter": 5,
+      "number": 8,
+      "type": "single",
+      "prompt": "The program stops on line 7 with `NameError: name 'chosen' is not defined`. Where is the real problem?\n\n```python\nlevel = 120\nif level > 100:\n    print(\"Too sweet!\")\nelse:\n    chosen = level\nprint(\"Sugar level:\", level)\nprint(f\"Noted: {chosen}% sugar.\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The program stops on line 7 with `NameError: name 'chosen' is not defined`. Where is the real problem?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "level = 120\nif level > 100:\n    print(\"Too sweet!\")\nelse:\n    chosen = level\nprint(\"Sugar level:\", level)\nprint(f\"Noted: {chosen}% sugar.\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Line 7 — `chosen` is spelled wrong"
+        },
+        {
+          "id": "B",
+          "text": "Line 6 — the line just above line 7"
+        },
+        {
+          "id": "C",
+          "text": "Lines 2 to 5 — with 120, the line `chosen = level` never runs"
+        },
+        {
+          "id": "D",
+          "text": "Line 1 — Python cannot use 120 in an `if`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-9",
+      "chapter": 5,
+      "number": 9,
+      "type": "single",
+      "prompt": "What is the LAST line printed?\n\n```python\ntotal = 0\ncount = 0\nfor cup in range(1, 4):\n    total = total + cup * 10\n    print(f\"DEBUG: cup={cup}, total={total}\")\ncount = count + 1\nprint(\"Cups:\", count, \"Total:\", total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is the LAST line printed?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "total = 0\ncount = 0\nfor cup in range(1, 4):\n    total = total + cup * 10\n    print(f\"DEBUG: cup={cup}, total={total}\")\ncount = count + 1\nprint(\"Cups:\", count, \"Total:\", total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Cups: 3 Total: 60`"
+        },
+        {
+          "id": "B",
+          "text": "`Cups: 1 Total: 60`"
+        },
+        {
+          "id": "C",
+          "text": "`IndentationError: expected an indented block after 'for' statement on line 3`"
+        },
+        {
+          "id": "D",
+          "text": "`Cups: 4 Total: 100`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-09-10",
+      "chapter": 5,
+      "number": 10,
+      "type": "single",
+      "prompt": "The user types `150`. What is the last line on the screen?\n\n```python\nprint(\"=== Bubble Tea ===\")\nsugar = int(input(\"Sugar level (0 to 100): \"))\nwhile sugar < 0 and sugar > 100:\n    print(\"Impossible. Try again.\")\n    sugar = int(input(\"Sugar level (0 to 100): \"))\nprint(f\"Noted: {sugar}% sugar.\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user types `150`. What is the last line on the screen?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(\"=== Bubble Tea ===\")\nsugar = int(input(\"Sugar level (0 to 100): \"))\nwhile sugar < 0 and sugar > 100:\n    print(\"Impossible. Try again.\")\n    sugar = int(input(\"Sugar level (0 to 100): \"))\nprint(f\"Noted: {sugar}% sugar.\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Impossible. Try again.`"
+        },
+        {
+          "id": "B",
+          "text": "`ValueError: invalid literal for int() with base 10: '150'`"
+        },
+        {
+          "id": "C",
+          "text": "`Noted: 150% sugar.`"
+        },
+        {
+          "id": "D",
+          "text": "`Sugar level (0 to 100):` — the question comes back forever"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_09_quiz.md"
+    },
+    {
+      "id": "py-14-1",
+      "chapter": 6,
+      "number": 1,
+      "type": "single",
+      "prompt": "In the string `\"Python\"`, which character is at index `0`?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In the string `\"Python\"`, which character is at index `0`?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`P`"
+        },
+        {
+          "id": "B",
+          "text": "`y`"
+        },
+        {
+          "id": "C",
+          "text": "`n`"
+        },
+        {
+          "id": "D",
+          "text": "There is no index 0 — counting starts at 1"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-2",
+      "chapter": 6,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nword = \"Python\"\nprint(word[-2])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "word = \"Python\"\nprint(word[-2])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`P`"
+        },
+        {
+          "id": "B",
+          "text": "`o`"
+        },
+        {
+          "id": "C",
+          "text": "`n`"
+        },
+        {
+          "id": "D",
+          "text": "`IndexError: string index out of range`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-3",
+      "chapter": 6,
+      "number": 3,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nphone = \"13812345678\"\nprint(phone[2:5])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "phone = \"13812345678\"\nprint(phone[2:5])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`812`"
+        },
+        {
+          "id": "B",
+          "text": "`8123`"
+        },
+        {
+          "id": "C",
+          "text": "`81`"
+        },
+        {
+          "id": "D",
+          "text": "`3812`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-4",
+      "chapter": 6,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\norder = \"large milk tea\"\nprint(\"Milk\" in order)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "order = \"large milk tea\"\nprint(\"Milk\" in order)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`True`"
+        },
+        {
+          "id": "B",
+          "text": "`False`"
+        },
+        {
+          "id": "C",
+          "text": "`milk`"
+        },
+        {
+          "id": "D",
+          "text": "`TypeError: 'in <string>' requires string as left operand, not int`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-5",
+      "chapter": 6,
+      "number": 5,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndrink = \"milk tea\"\ndrink[0] = \"M\"\nprint(drink)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "drink = \"milk tea\"\ndrink[0] = \"M\"\nprint(drink)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `Milk tea`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `milk tea` — the change is ignored"
+        },
+        {
+          "id": "C",
+          "text": "`TypeError: 'str' object does not support item assignment`"
+        },
+        {
+          "id": "D",
+          "text": "`IndexError: string index out of range`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-6",
+      "chapter": 6,
+      "number": 6,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nshop = \"bubble tea\"\nshop.upper()\nprint(shop)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "shop = \"bubble tea\"\nshop.upper()\nprint(shop)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`BUBBLE TEA`"
+        },
+        {
+          "id": "B",
+          "text": "`bubble tea`"
+        },
+        {
+          "id": "C",
+          "text": "`Bubble Tea`"
+        },
+        {
+          "id": "D",
+          "text": "`TypeError: 'str' object does not support item assignment`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-7",
+      "chapter": 6,
+      "number": 7,
+      "type": "single",
+      "prompt": "The user typed `yes` with spaces around it. Which line makes `answer == \"yes\"` true?\n\n```python\nanswer = \"  yes \"\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "The user typed `yes` with spaces around it. Which line makes `answer == \"yes\"` true?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "answer = \"  yes \""
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`answer = answer.strip()`"
+        },
+        {
+          "id": "B",
+          "text": "`answer = answer.replace(\"yes\", \"\")`"
+        },
+        {
+          "id": "C",
+          "text": "`answer = answer.upper()`"
+        },
+        {
+          "id": "D",
+          "text": "`answer.strip()`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-8",
+      "chapter": 6,
+      "number": 8,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nword = \"banana\"\ncount = 0\nfor letter in word:\n    if letter in \"aeiou\":\n        count += 1\nprint(count, word[1:4])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "word = \"banana\"\ncount = 0\nfor letter in word:\n    if letter in \"aeiou\":\n        count += 1\nprint(count, word[1:4])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`3 nan`"
+        },
+        {
+          "id": "B",
+          "text": "`6 ana`"
+        },
+        {
+          "id": "C",
+          "text": "`3 ana`"
+        },
+        {
+          "id": "D",
+          "text": "`3 anan`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-9",
+      "chapter": 6,
+      "number": 9,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ntext = \"  Milk Tea  \"\nclean = text.strip()\nclean = clean.lower()\nprint(len(text), len(clean), clean)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "text = \"  Milk Tea  \"\nclean = text.strip()\nclean = clean.lower()\nprint(len(text), len(clean), clean)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`8 8 milk tea`"
+        },
+        {
+          "id": "B",
+          "text": "`12 12 milk tea`"
+        },
+        {
+          "id": "C",
+          "text": "`12 8 Milk Tea`"
+        },
+        {
+          "id": "D",
+          "text": "`12 8 milk tea`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-14-10",
+      "chapter": 6,
+      "number": 10,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nword = \"tea\"\nresult = \"\"\nfor letter in word:\n    result = letter + result\nprint(result, result == word)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "word = \"tea\"\nresult = \"\"\nfor letter in word:\n    result = letter + result\nprint(result, result == word)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`tea True`"
+        },
+        {
+          "id": "B",
+          "text": "`aet False`"
+        },
+        {
+          "id": "C",
+          "text": "`tea False`"
+        },
+        {
+          "id": "D",
+          "text": "`aet True`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_14_quiz.md"
+    },
+    {
+      "id": "py-15-1",
+      "chapter": 7,
+      "number": 1,
+      "type": "single",
+      "prompt": "What is a list in Python?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is a list in Python?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "A number that changes each time the program runs"
+        },
+        {
+          "id": "B",
+          "text": "One variable that holds several values, in order"
+        },
+        {
+          "id": "C",
+          "text": "A function that gives back one value, chosen by chance"
+        },
+        {
+          "id": "D",
+          "text": "A piece of text between square brackets, like a string"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-2",
+      "chapter": 7,
+      "number": 2,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ncards = [\"Rat\", \"Knight\", \"Phoenix\"]\nprint(cards[1])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "cards = [\"Rat\", \"Knight\", \"Phoenix\"]\nprint(cards[1])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Rat`"
+        },
+        {
+          "id": "B",
+          "text": "`Phoenix`"
+        },
+        {
+          "id": "C",
+          "text": "`Knight`"
+        },
+        {
+          "id": "D",
+          "text": "`IndexError: list index out of range`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-3",
+      "chapter": 7,
+      "number": 3,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndays = [\"Mon\", \"Tue\", \"Wed\"]\nprint(days[3])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "days = [\"Mon\", \"Tue\", \"Wed\"]\nprint(days[3])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`IndexError: list index out of range`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `None`"
+        },
+        {
+          "id": "C",
+          "text": "`IndexError: string index out of range`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `Wed`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-4",
+      "chapter": 7,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nmenu = [\"rice\", \"noodles\", \"soup\"]\nmenu[2] = \"fish\"\nprint(menu)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "menu = [\"rice\", \"noodles\", \"soup\"]\nmenu[2] = \"fish\"\nprint(menu)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`['rice', 'fish', 'soup']`"
+        },
+        {
+          "id": "B",
+          "text": "`['rice', 'noodles', 'soup', 'fish']`"
+        },
+        {
+          "id": "C",
+          "text": "`TypeError: 'str' object does not support item assignment`"
+        },
+        {
+          "id": "D",
+          "text": "`['rice', 'noodles', 'fish']`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-5",
+      "chapter": 7,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nbag = []\nbag.append(\"Bat\")\nbag.append(\"Rat\")\nprint(bag, len(bag))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "bag = []\nbag.append(\"Bat\")\nbag.append(\"Rat\")\nprint(bag, len(bag))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`None 0`"
+        },
+        {
+          "id": "B",
+          "text": "`['Rat', 'Bat'] 2`"
+        },
+        {
+          "id": "C",
+          "text": "`['Rat'] 1`"
+        },
+        {
+          "id": "D",
+          "text": "`['Bat', 'Rat'] 2`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-6",
+      "chapter": 7,
+      "number": 6,
+      "type": "single",
+      "prompt": "What does `random.choice(pool)` do?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does `random.choice(pool)` do?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It puts the items of the list in a new order"
+        },
+        {
+          "id": "B",
+          "text": "It gives back a random number between 1 and 6"
+        },
+        {
+          "id": "C",
+          "text": "It gives back one item of the list, chosen by chance. The list does not change"
+        },
+        {
+          "id": "D",
+          "text": "It gives back one item chosen by chance, and removes it from the list"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-7",
+      "chapter": 7,
+      "number": 7,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nmarks = [12, 18, 9]\nprint(max(marks), sum(marks) / len(marks))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "marks = [12, 18, 9]\nprint(max(marks), sum(marks) / len(marks))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`18 13.0`"
+        },
+        {
+          "id": "B",
+          "text": "`18 13`"
+        },
+        {
+          "id": "C",
+          "text": "`9 13.0`"
+        },
+        {
+          "id": "D",
+          "text": "`18 39`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-8",
+      "chapter": 7,
+      "number": 8,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\nimport random\n\npool = [\"Slime\"]\nbag = []\nfor i in range(3):\n    card = random.choice(pool)\n    bag = bag.append(card)\nprint(bag)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "import random\n\npool = [\"Slime\"]\nbag = []\nfor i in range(3):\n    card = random.choice(pool)\n    bag = bag.append(card)\nprint(bag)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `['Slime', 'Slime', 'Slime']`"
+        },
+        {
+          "id": "B",
+          "text": "`AttributeError: 'NoneType' object has no attribute 'append'`"
+        },
+        {
+          "id": "C",
+          "text": "It prints `['Slime']`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `None`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-9",
+      "chapter": 7,
+      "number": 9,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nscores = [55, 80, 62, 40]\nfor score in scores:\n    passed = 0\n    if score >= 60:\n        passed += 1\nprint(f\"Passed: {passed}\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "scores = [55, 80, 62, 40]\nfor score in scores:\n    passed = 0\n    if score >= 60:\n        passed += 1\nprint(f\"Passed: {passed}\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Passed: 4`"
+        },
+        {
+          "id": "B",
+          "text": "`Passed: 1`"
+        },
+        {
+          "id": "C",
+          "text": "`Passed: 0`"
+        },
+        {
+          "id": "D",
+          "text": "`Passed: 2`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-15-10",
+      "chapter": 7,
+      "number": 10,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndorm = [\"Li Hua\", \"Wang Lei\", \"Wang Wang\"]\nfound = 0\nfor name in dorm:\n    if \"Wang\" in name:\n        found += 1\nprint(found, \"Wang\" in dorm)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "dorm = [\"Li Hua\", \"Wang Lei\", \"Wang Wang\"]\nfound = 0\nfor name in dorm:\n    if \"Wang\" in name:\n        found += 1\nprint(found, \"Wang\" in dorm)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`3 True`"
+        },
+        {
+          "id": "B",
+          "text": "`1 True`"
+        },
+        {
+          "id": "C",
+          "text": "`0 False`"
+        },
+        {
+          "id": "D",
+          "text": "`2 False`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_15_quiz.md"
+    },
+    {
+      "id": "py-16-1",
+      "chapter": 8,
+      "number": 1,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nrarity = {\"Slime\": \"R\", \"Knight\": \"SR\", \"Dragon\": \"SSR\"}\nprint(rarity[\"Knight\"])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "rarity = {\"Slime\": \"R\", \"Knight\": \"SR\", \"Dragon\": \"SSR\"}\nprint(rarity[\"Knight\"])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`SR`"
+        },
+        {
+          "id": "B",
+          "text": "`1`"
+        },
+        {
+          "id": "C",
+          "text": "`Knight`"
+        },
+        {
+          "id": "D",
+          "text": "`KeyError: 'Knight'`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-2",
+      "chapter": 8,
+      "number": 2,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\nrarity = {\"Slime\": \"R\", \"Dragon\": \"SSR\"}\nprint(rarity[\"dragon\"])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "rarity = {\"Slime\": \"R\", \"Dragon\": \"SSR\"}\nprint(rarity[\"dragon\"])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`IndexError: list index out of range`"
+        },
+        {
+          "id": "B",
+          "text": "`KeyError: 'dragon'`"
+        },
+        {
+          "id": "C",
+          "text": "`SSR`"
+        },
+        {
+          "id": "D",
+          "text": "`None`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-3",
+      "chapter": 8,
+      "number": 3,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\nprices = {\"rice\": 3, \"noodles\": 8}\nprint(prices[0])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "prices = {\"rice\": 3, \"noodles\": 8}\nprint(prices[0])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`IndexError: list index out of range`"
+        },
+        {
+          "id": "B",
+          "text": "`rice`"
+        },
+        {
+          "id": "C",
+          "text": "`3`"
+        },
+        {
+          "id": "D",
+          "text": "`KeyError: 0`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-4",
+      "chapter": 8,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndata = {1: \"red\", 34: \"blue\", 0: \"green\"}\nprint(data[0])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "data = {1: \"red\", 34: \"blue\", 0: \"green\"}\nprint(data[0])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`red`"
+        },
+        {
+          "id": "B",
+          "text": "`KeyError: 0`"
+        },
+        {
+          "id": "C",
+          "text": "`green`"
+        },
+        {
+          "id": "D",
+          "text": "`blue`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-5",
+      "chapter": 8,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nprices = {\"rice\": 3, \"noodles\": 8}\nprices[\"rice\"] = 4\nprices[\"soup\"] = 6\nprint(prices)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "prices = {\"rice\": 3, \"noodles\": 8}\nprices[\"rice\"] = 4\nprices[\"soup\"] = 6\nprint(prices)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`{'rice': 3, 'noodles': 8, 'rice': 4, 'soup': 6}`"
+        },
+        {
+          "id": "B",
+          "text": "`{'rice': 4, 'noodles': 8, 'soup': 6}`"
+        },
+        {
+          "id": "C",
+          "text": "`KeyError: 'soup'`"
+        },
+        {
+          "id": "D",
+          "text": "`{'rice': 4, 'noodles': 8}`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-6",
+      "chapter": 8,
+      "number": 6,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nrarity = {\"Slime\": \"R\", \"Dragon\": \"SSR\"}\nprint(\"Dragon\" in rarity, \"R\" in rarity)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "rarity = {\"Slime\": \"R\", \"Dragon\": \"SSR\"}\nprint(\"Dragon\" in rarity, \"R\" in rarity)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`True False`"
+        },
+        {
+          "id": "B",
+          "text": "`True True`"
+        },
+        {
+          "id": "C",
+          "text": "`False True`"
+        },
+        {
+          "id": "D",
+          "text": "`False False`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-7",
+      "chapter": 8,
+      "number": 7,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nscores = {\"Leo\": 15, \"Mei\": 18}\nfor name in scores:\n    print(name)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "scores = {\"Leo\": 15, \"Mei\": 18}\nfor name in scores:\n    print(name)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`KeyError: 'Leo'`"
+        },
+        {
+          "id": "B",
+          "text": "`15`, then `18`"
+        },
+        {
+          "id": "C",
+          "text": "`Leo`, then `Mei`"
+        },
+        {
+          "id": "D",
+          "text": "`Leo: 15`, then `Mei: 18`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-8",
+      "chapter": 8,
+      "number": 8,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nprices = {\"rice\": 3, \"noodles\": 8}\nprices[\"noodle\"] = 10\ntotal = 0\nfor dish in prices:\n    total += prices[dish]\nprint(total, len(prices))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "prices = {\"rice\": 3, \"noodles\": 8}\nprices[\"noodle\"] = 10\ntotal = 0\nfor dish in prices:\n    total += prices[dish]\nprint(total, len(prices))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`13 2`"
+        },
+        {
+          "id": "B",
+          "text": "`21 3`"
+        },
+        {
+          "id": "C",
+          "text": "`11 2`"
+        },
+        {
+          "id": "D",
+          "text": "`KeyError: 'noodle'`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-9",
+      "chapter": 8,
+      "number": 9,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\nresults = [\"R\", \"SR\", \"R\"]\ncounts = {}\nfor r in results:\n    print(f\"Draw: {r}\")\n    counts[r] += 1\nprint(counts)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "results = [\"R\", \"SR\", \"R\"]\ncounts = {}\nfor r in results:\n    print(f\"Draw: {r}\")\n    counts[r] += 1\nprint(counts)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Draw: R`, `Draw: SR`, `Draw: R`, then `{}`"
+        },
+        {
+          "id": "B",
+          "text": "`Draw: R`, `Draw: SR`, `Draw: R`, then `{'R': 2, 'SR': 1}`"
+        },
+        {
+          "id": "C",
+          "text": "`KeyError: 'R'`, and no line before it"
+        },
+        {
+          "id": "D",
+          "text": "`Draw: R`, then `KeyError: 'R'`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-16-10",
+      "chapter": 8,
+      "number": 10,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nrooms = {\"Leo\": 301, \"Mei\": 502, \"Wang\": 415}\nbig = 0\nfor name in rooms:\n    if rooms[name] > 400:\n        big += 1\nif 502 in rooms:\n    print(f\"Room 502 is taken. {big}\")\nelse:\n    print(f\"Room 502 is free. {big}\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "rooms = {\"Leo\": 301, \"Mei\": 502, \"Wang\": 415}\nbig = 0\nfor name in rooms:\n    if rooms[name] > 400:\n        big += 1\nif 502 in rooms:\n    print(f\"Room 502 is taken. {big}\")\nelse:\n    print(f\"Room 502 is free. {big}\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Room 502 is free. 2`"
+        },
+        {
+          "id": "B",
+          "text": "`Room 502 is taken. 2`"
+        },
+        {
+          "id": "C",
+          "text": "`KeyError: 502`"
+        },
+        {
+          "id": "D",
+          "text": "`Room 502 is taken. 1`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_16_quiz.md"
+    },
+    {
+      "id": "py-17-1",
+      "chapter": 9,
+      "number": 1,
+      "type": "single",
+      "prompt": "What does `def` do?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does `def` do?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It defines a function: it gives a name to a block of code"
+        },
+        {
+          "id": "B",
+          "text": "It runs a block of code at once"
+        },
+        {
+          "id": "C",
+          "text": "It sends a value back to the line that called the function"
+        },
+        {
+          "id": "D",
+          "text": "It prints the value that a function gives back"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-2",
+      "chapter": 9,
+      "number": 2,
+      "type": "single",
+      "prompt": "This file has only these two lines. What does it print?\n\n```python\ndef say_hi():\n    print(\"Hi!\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "This file has only these two lines. What does it print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def say_hi():\n    print(\"Hi!\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`say_hi`"
+        },
+        {
+          "id": "B",
+          "text": "`Hi!`"
+        },
+        {
+          "id": "C",
+          "text": "Nothing"
+        },
+        {
+          "id": "D",
+          "text": "`NameError: name 'say_hi' is not defined`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-3",
+      "chapter": 9,
+      "number": 3,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\nprint(len)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "print(len)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`0`"
+        },
+        {
+          "id": "B",
+          "text": "`<built-in function len>`"
+        },
+        {
+          "id": "C",
+          "text": "Nothing"
+        },
+        {
+          "id": "D",
+          "text": "`NameError: name 'len' is not defined`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-4",
+      "chapter": 9,
+      "number": 4,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndef greet(name):\n    print(f\"Hi {name}!\")\n\ngreet()\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def greet(name):\n    print(f\"Hi {name}!\")\n\ngreet()"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`TypeError: greet() missing 1 required positional argument: 'name'`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `Hi !`"
+        },
+        {
+          "id": "C",
+          "text": "It prints `Hi None!`"
+        },
+        {
+          "id": "D",
+          "text": "`NameError: name 'name' is not defined`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-5",
+      "chapter": 9,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef get_cost(draws):\n    return draws * 160\n\ncost = get_cost(2) + get_cost(1)\nprint(cost)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_cost(draws):\n    return draws * 160\n\ncost = get_cost(2) + get_cost(1)\nprint(cost)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`None`"
+        },
+        {
+          "id": "B",
+          "text": "`TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'`"
+        },
+        {
+          "id": "C",
+          "text": "`3`"
+        },
+        {
+          "id": "D",
+          "text": "`480`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-6",
+      "chapter": 9,
+      "number": 6,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndef show_cost(draws):\n    print(draws * 160)\n\ntotal = show_cost(2) + 100\nprint(total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def show_cost(draws):\n    print(draws * 160)\n\ntotal = show_cost(2) + 100\nprint(total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Only `TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `320`, then `TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'`"
+        },
+        {
+          "id": "C",
+          "text": "It prints `420`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `320`, then `420`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-7",
+      "chapter": 9,
+      "number": 7,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\nsay_hello()\n\ndef say_hello():\n    print(\"Hello!\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "say_hello()\n\ndef say_hello():\n    print(\"Hello!\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "Nothing"
+        },
+        {
+          "id": "B",
+          "text": "`IndentationError: expected an indented block after function definition on line 3`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'say_hello' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `Hello!`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-8",
+      "chapter": 9,
+      "number": 8,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef get_cost(draws):\n    return draws * 160\n\ndef show_pack(draws, cost):\n    print(f\"{draws} draws: {cost} gems\")\n\nfor draws in [2, 10]:\n    cost = get_cost(draws)\n    show_pack(draws, cost)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_cost(draws):\n    return draws * 160\n\ndef show_pack(draws, cost):\n    print(f\"{draws} draws: {cost} gems\")\n\nfor draws in [2, 10]:\n    cost = get_cost(draws)\n    show_pack(draws, cost)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`2 draws: 2 gems`, then `10 draws: 10 gems`"
+        },
+        {
+          "id": "B",
+          "text": "`TypeError: show_pack() missing 1 required positional argument: 'cost'`"
+        },
+        {
+          "id": "C",
+          "text": "`2 draws: None gems`, then `10 draws: None gems`"
+        },
+        {
+          "id": "D",
+          "text": "`2 draws: 320 gems`, then `10 draws: 1600 gems`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-9",
+      "chapter": 9,
+      "number": 9,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef add_bonus(gems):\n    print(\"Bonus!\")\n    return gems + 50\n\nprint(\"Start\")\ntotal = add_bonus(100)\ntotal = add_bonus(total)\nprint(total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def add_bonus(gems):\n    print(\"Bonus!\")\n    return gems + 50\n\nprint(\"Start\")\ntotal = add_bonus(100)\ntotal = add_bonus(total)\nprint(total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Start`, then `Bonus!`, then `150`"
+        },
+        {
+          "id": "B",
+          "text": "`Bonus!`, then `Bonus!`, then `Start`, then `200`"
+        },
+        {
+          "id": "C",
+          "text": "`Start`, then `Bonus!`, then `Bonus!`, then `200`"
+        },
+        {
+          "id": "D",
+          "text": "`Start`, then `Bonus!`, then `Bonus!`, then `None`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-17-10",
+      "chapter": 9,
+      "number": 10,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndef get_rarity(number):\n    if number <= 2:\n        return \"SSR\"\n    if number <= 20:\n        return \"SR\"\n\ncounts = {\"SSR\": 0, \"SR\": 0, \"R\": 0}\nfor n in [1, 15, 70]:\n    r = get_rarity(n)\n    counts[r] += 1\nprint(counts)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_rarity(number):\n    if number <= 2:\n        return \"SSR\"\n    if number <= 20:\n        return \"SR\"\n\ncounts = {\"SSR\": 0, \"SR\": 0, \"R\": 0}\nfor n in [1, 15, 70]:\n    r = get_rarity(n)\n    counts[r] += 1\nprint(counts)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'`"
+        },
+        {
+          "id": "B",
+          "text": "`KeyError: None`"
+        },
+        {
+          "id": "C",
+          "text": "`{'SSR': 1, 'SR': 1, 'R': 0}`"
+        },
+        {
+          "id": "D",
+          "text": "`{'SSR': 1, 'SR': 1, 'R': 1}`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_17_quiz.md"
+    },
+    {
+      "id": "py-18-1",
+      "chapter": 10,
+      "number": 1,
+      "type": "single",
+      "prompt": "What does `-> int` mean in this line?\n\n```python\ndef get_total(durations: list) -> int:\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does `-> int` mean in this line?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_total(durations: list) -> int:"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "The function gives back an `int`"
+        },
+        {
+          "id": "B",
+          "text": "The parameter `durations` must be an `int`"
+        },
+        {
+          "id": "C",
+          "text": "Python stops with an error if the function gives back a `str`"
+        },
+        {
+          "id": "D",
+          "text": "The function prints an `int` on the screen"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-2",
+      "chapter": 10,
+      "number": 2,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndef get_total(durations):\n    total = 0\n    for seconds in durations:\n        total += seconds\n    return total\n\nplayed = get_total([100, 200])\nprint(total)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_total(durations):\n    total = 0\n    for seconds in durations:\n        total += seconds\n    return total\n\nplayed = get_total([100, 200])\nprint(total)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `300`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `0`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'total' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `None`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-3",
+      "chapter": 10,
+      "number": 3,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef add_star():\n    stars = 0\n    stars += 1\n    return stars\n\nprint(add_star(), add_star())\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def add_star():\n    stars = 0\n    stars += 1\n    return stars\n\nprint(add_star(), add_star())"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`1 2`"
+        },
+        {
+          "id": "B",
+          "text": "`1 1`"
+        },
+        {
+          "id": "C",
+          "text": "`0 1`"
+        },
+        {
+          "id": "D",
+          "text": "`2 2`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-4",
+      "chapter": 10,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef get_total(prices):\n    total = 0\n    for p in prices:\n        total += p\n        return total\n\nprint(get_total([4, 6, 10]))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_total(prices):\n    total = 0\n    for p in prices:\n        total += p\n        return total\n\nprint(get_total([4, 6, 10]))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`20`"
+        },
+        {
+          "id": "B",
+          "text": "`0`"
+        },
+        {
+          "id": "C",
+          "text": "`None`"
+        },
+        {
+          "id": "D",
+          "text": "`4`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-5",
+      "chapter": 10,
+      "number": 5,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef double(n: int) -> int:\n    return n * 2\n\nprint(double(\"ok\"))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def double(n: int) -> int:\n    return n * 2\n\nprint(double(\"ok\"))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`okok`"
+        },
+        {
+          "id": "B",
+          "text": "`TypeError: can only concatenate str (not \"int\") to str`"
+        },
+        {
+          "id": "C",
+          "text": "`None`"
+        },
+        {
+          "id": "D",
+          "text": "`ok2`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-6",
+      "chapter": 10,
+      "number": 6,
+      "type": "single",
+      "prompt": "A function gives back `True` when a song is longer than 240 seconds. Which name is the best?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "A function gives back `True` when a song is longer than 240 seconds. Which name is the best?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`long(s)`"
+        },
+        {
+          "id": "B",
+          "text": "`is_long(seconds)`"
+        },
+        {
+          "id": "C",
+          "text": "`print_long(seconds)`"
+        },
+        {
+          "id": "D",
+          "text": "`song()`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-7",
+      "chapter": 10,
+      "number": 7,
+      "type": "single",
+      "prompt": "Where do you write the docstring of a function?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Where do you write the docstring of a function?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "On the line above `def`"
+        },
+        {
+          "id": "B",
+          "text": "After the `return` line"
+        },
+        {
+          "id": "C",
+          "text": "At the bottom of the file, in the main part"
+        },
+        {
+          "id": "D",
+          "text": "On the first line of the body, pushed right by 4 spaces"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-8",
+      "chapter": 10,
+      "number": 8,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndef get_cheap(prices):\n    cheap = []\n    for p in prices:\n        if p < 10:\n            cheap.append(p)\n\nfor p in get_cheap([5, 12, 8]):\n    print(p)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_cheap(prices):\n    cheap = []\n    for p in prices:\n        if p < 10:\n            cheap.append(p)\n\nfor p in get_cheap([5, 12, 8]):\n    print(p)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `5`, then `8`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `[]`"
+        },
+        {
+          "id": "C",
+          "text": "`TypeError: 'NoneType' object is not iterable`"
+        },
+        {
+          "id": "D",
+          "text": "`NameError: name 'cheap' is not defined`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-9",
+      "chapter": 10,
+      "number": 9,
+      "type": "single",
+      "prompt": "What happens when this code runs?\n\n```python\ndef score(points):\n    return sum(points)\n\nscore = score([3, 4])\nprint(score)\nprint(score([1, 2]))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What happens when this code runs?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def score(points):\n    return sum(points)\n\nscore = score([3, 4])\nprint(score)\nprint(score([1, 2]))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `7`, then `3`"
+        },
+        {
+          "id": "B",
+          "text": "It prints `7`, then `TypeError: 'int' object is not callable`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'score' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "It prints `7`, then `None`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-18-10",
+      "chapter": 10,
+      "number": 10,
+      "type": "single",
+      "prompt": "What does the following code output?\n\n```python\ndef get_length(playlist, title):\n    if title in playlist:\n        return playlist[title]\n    return 0\n\ndef is_long(seconds):\n    return seconds > 240\n\nplaylist = {\"Rain\": 198, \"Night Bus\": 312}\nfor title in [\"Rain\", \"Night Bus\", \"Hello\"]:\n    seconds = get_length(playlist, title)\n    print(is_long(seconds))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does the following code output?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "def get_length(playlist, title):\n    if title in playlist:\n        return playlist[title]\n    return 0\n\ndef is_long(seconds):\n    return seconds > 240\n\nplaylist = {\"Rain\": 198, \"Night Bus\": 312}\nfor title in [\"Rain\", \"Night Bus\", \"Hello\"]:\n    seconds = get_length(playlist, title)\n    print(is_long(seconds))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`198`, then `312`, then `0`"
+        },
+        {
+          "id": "B",
+          "text": "`False`, then `True`, then `KeyError: 'Hello'`"
+        },
+        {
+          "id": "C",
+          "text": "`True`, then `True`, then `False`"
+        },
+        {
+          "id": "D",
+          "text": "`False`, then `True`, then `False`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_18_quiz.md"
+    },
+    {
+      "id": "py-19-1",
+      "chapter": 11,
+      "number": 1,
+      "type": "single",
+      "prompt": "What is a module?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What is a module?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "A Python file that other files can use"
+        },
+        {
+          "id": "B",
+          "text": "A function that is inside a loop"
+        },
+        {
+          "id": "C",
+          "text": "A folder that holds Python files"
+        },
+        {
+          "id": "D",
+          "text": "A variable with a fixed value"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-2",
+      "chapter": 11,
+      "number": 2,
+      "type": "single",
+      "prompt": "`greet.py` and `main.py` are in the same folder. What happens when you run `main.py`?\n\n```python\n# greet.py\ndef say_hello():\n    print(\"Hello!\")\n```\n\n```python\n# main.py\nimport greet\n\nsay_hello()\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "`greet.py` and `main.py` are in the same folder. What happens when you run `main.py`?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# greet.py\ndef say_hello():\n    print(\"Hello!\")"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# main.py\nimport greet\n\nsay_hello()"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `Hello!`"
+        },
+        {
+          "id": "B",
+          "text": "`NameError: name 'say_hello' is not defined`"
+        },
+        {
+          "id": "C",
+          "text": "`ModuleNotFoundError: No module named 'say_hello'`"
+        },
+        {
+          "id": "D",
+          "text": "`AttributeError: module 'greet' has no attribute 'say_hello'`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-3",
+      "chapter": 11,
+      "number": 3,
+      "type": "single",
+      "prompt": "Which line imports the file `menu.py`?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "Which line imports the file `menu.py`?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`import menu.py`"
+        },
+        {
+          "id": "B",
+          "text": "`import \"menu\"`"
+        },
+        {
+          "id": "C",
+          "text": "`import menu`"
+        },
+        {
+          "id": "D",
+          "text": "`menu.import()`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-4",
+      "chapter": 11,
+      "number": 4,
+      "type": "single",
+      "prompt": "What does `main.py` print?\n\n```python\n# menu.py\nprices = {\"rice\": 10, \"soup\": 8}\n```\n\n```python\n# main.py\nimport menu\n\nprint(menu.prices[\"soup\"])\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "What does `main.py` print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# menu.py\nprices = {\"rice\": 10, \"soup\": 8}"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# main.py\nimport menu\n\nprint(menu.prices[\"soup\"])"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`8`"
+        },
+        {
+          "id": "B",
+          "text": "`KeyError: 'soup'`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'prices' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "`{'rice': 10, 'soup': 8}`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-5",
+      "chapter": 11,
+      "number": 5,
+      "type": "single",
+      "prompt": "`main.py` starts with `import menu`. You run `main.py` with ▶. What happens?\n\n```\ndelivery/\n├── main.py\n└── data/\n    └── menu.py\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "`main.py` starts with `import menu`. You run `main.py` with ▶. What happens?"
+        },
+        {
+          "type": "code",
+          "language": "",
+          "text": "delivery/\n├── main.py\n└── data/\n    └── menu.py"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It works: Python finds `menu.py` in `data/`"
+        },
+        {
+          "id": "B",
+          "text": "`AttributeError: module 'menu' has no attribute 'data'`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'menu' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "`ModuleNotFoundError: No module named 'menu'`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-6",
+      "chapter": 11,
+      "number": 6,
+      "type": "single",
+      "prompt": "You wrote a new function `print_bill` in `bill.py`. The tab of `bill.py` shows a white dot. You run `main.py`, which calls `bill.print_bill(prices, basket)`. What does Python say?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You wrote a new function `print_bill` in `bill.py`. The tab of `bill.py` shows a white dot. You run `main.py`, which calls `bill.print_bill(prices, basket)`. What does Python say?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`ModuleNotFoundError: No module named 'bill'`"
+        },
+        {
+          "id": "B",
+          "text": "`AttributeError: module 'bill' has no attribute 'print_bill'`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'print_bill' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "Nothing: Python reads the code on your screen"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-7",
+      "chapter": 11,
+      "number": 7,
+      "type": "single",
+      "prompt": "In this course, where do the questions (`input()`), the loops and the messages (`print()`) of the program go?",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "In this course, where do the questions (`input()`), the loops and the messages (`print()`) of the program go?"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "In the data module, under the lists"
+        },
+        {
+          "id": "B",
+          "text": "At the bottom of every module"
+        },
+        {
+          "id": "C",
+          "text": "In `main.py`, the file you run with ▶"
+        },
+        {
+          "id": "D",
+          "text": "In a module, outside the functions"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-8",
+      "chapter": 11,
+      "number": 8,
+      "type": "single",
+      "prompt": "`greet.py` has a function `say_hi(name)` that prints `Hi` and the name. What happens when you run `main.py`?\n\n```python\n# main.py\nfrom greet import say_hi\n\ngreet.say_hi(\"Mei\")\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "`greet.py` has a function `say_hi(name)` that prints `Hi` and the name. What happens when you run `main.py`?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# main.py\nfrom greet import say_hi\n\ngreet.say_hi(\"Mei\")"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "It prints `Hi Mei!`"
+        },
+        {
+          "id": "B",
+          "text": "`NameError: name 'say_hi' is not defined`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'greet' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "`ImportError: cannot import name 'say_hi' from 'greet'`"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-9",
+      "chapter": 11,
+      "number": 9,
+      "type": "single",
+      "prompt": "You run `main.py`. What does it print?\n\n```python\n# tools.py\ndef get_double(n):\n    return n * 2\n\nprint(\"tools is ready\")\n```\n\n```python\n# main.py\nimport tools\n\nprint(\"Start\")\nprint(tools.get_double(4))\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You run `main.py`. What does it print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# tools.py\ndef get_double(n):\n    return n * 2\n\nprint(\"tools is ready\")"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# main.py\nimport tools\n\nprint(\"Start\")\nprint(tools.get_double(4))"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`tools is ready`, then `Start`, then `8`"
+        },
+        {
+          "id": "B",
+          "text": "`Start`, then `tools is ready`, then `8`"
+        },
+        {
+          "id": "C",
+          "text": "`Start`, then `8`"
+        },
+        {
+          "id": "D",
+          "text": "`Start`, then `8`, then `tools is ready`"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-10",
+      "chapter": 11,
+      "number": 10,
+      "type": "single",
+      "prompt": "You run `main.py`. What does it print?\n\n```python\n# bell.py\ndef ring():\n    print(\"Ring!\")\n```\n\n```python\n# main.py\nimport bell\n\nsound = bell.ring()\nprint(sound)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You run `main.py`. What does it print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# bell.py\ndef ring():\n    print(\"Ring!\")"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# main.py\nimport bell\n\nsound = bell.ring()\nprint(sound)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`Ring!`, then `Ring!`"
+        },
+        {
+          "id": "B",
+          "text": "`None`"
+        },
+        {
+          "id": "C",
+          "text": "`NameError: name 'sound' is not defined`"
+        },
+        {
+          "id": "D",
+          "text": "`Ring!`, then `None`"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "source": "course_19_quiz.md"
+    },
+    {
+      "id": "py-19-11",
+      "chapter": 11,
+      "number": 11,
+      "type": "single",
+      "prompt": "You run `main.py`. What does it print?\n\n```python\n# shop.py\nprices = {\"tea\": 5, \"cake\": 8}\n\ndef get_total(prices, items):\n    total = 0\n    for item in items:\n        total += prices[item]\n    return total\n```\n\n```python\n# main.py\nimport shop\n\nitems = [\"tea\", \"cake\", \"tea\"]\ntotal = shop.get_total(shop.prices, items)\nprint(total + 2)\n```",
+      "blocks": [
+        {
+          "type": "text",
+          "text": "You run `main.py`. What does it print?"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# shop.py\nprices = {\"tea\": 5, \"cake\": 8}\n\ndef get_total(prices, items):\n    total = 0\n    for item in items:\n        total += prices[item]\n    return total"
+        },
+        {
+          "type": "code",
+          "language": "python",
+          "text": "# main.py\nimport shop\n\nitems = [\"tea\", \"cake\", \"tea\"]\ntotal = shop.get_total(shop.prices, items)\nprint(total + 2)"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "`18`"
+        },
+        {
+          "id": "B",
+          "text": "`20`"
+        },
+        {
+          "id": "C",
+          "text": "`15`"
+        },
+        {
+          "id": "D",
+          "text": "`NameError: name 'prices' is not defined`"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "source": "course_19_quiz.md"
+    }
+  ]
+}

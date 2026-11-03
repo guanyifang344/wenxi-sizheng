@@ -1,6 +1,19 @@
-import {makeSession, isCorrect, nextRecord, addRetry, upgradeSessions, questionTypeLabel, answerLabel, notebookQuestions} from './engine.js?v=2.0';
+import {createPythonApp} from './python-app.js?v=3.0';
+import {makeSession, isCorrect, nextRecord, addRetry, upgradeSessions, questionTypeLabel, answerLabel, notebookQuestions} from './engine.js?v=3.0';
 const KEY = 'wenxi-sizheng-v1';
 const main = document.querySelector('#main');
+let subject='sizheng';
+const originalNav=document.querySelector('.sidebar nav').innerHTML;
+const pythonApp=createPythonApp({main,notice,isActive:()=>subject==='python'});
+function switchSubject(value){
+ subject=value==='python'?'python':'sizheng';
+ document.querySelector('#subject-select').value=subject;
+ document.querySelector('#notice').hidden=true;
+ try{localStorage.setItem('wenxi-active-subject',subject);}catch{}
+ if(subject==='python'){pythonApp.show();}else{document.querySelector('.sidebar nav').innerHTML=originalNav;document.querySelector('.sidebar-note small').textContent='思想道德与法治 · 2026 期中';document.querySelector('.storage-note').innerHTML='<span class="status-dot"></span>思政进度独立保存';page='home';render();}
+ focusMain();
+}
+document.querySelector('#subject-select').addEventListener('change',e=>switchSubject(e.target.value));
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let bank, byId, state = {version: 1, progress: {}, session: null}, page = 'home';
 let saving = true;
@@ -22,9 +35,10 @@ function badges() {
   document.querySelectorAll('[data-nav]').forEach(b => b.classList.toggle('active', b.dataset.nav === page));
 }
 function header(label = '学习首页') {
-  return `<header class="topbar"><span>我的复习 / <strong>${label}</strong></span><span class="course-tag">思想道德与法治 <i>V2.0</i></span></header>`;
+  return `<header class="topbar"><span>我的复习 / <strong>${label}</strong></span><span class="course-tag">思想道德与法治 <i>V3.0</i></span></header>`;
 }
 function render() {
+  if(subject!=='sizheng')return;
   badges();
   if (page === 'session') return renderSession();
   if (page === 'mistakes') return renderNotebook();
@@ -124,6 +138,7 @@ function renderMaterials() {
   main.innerHTML=`${header('材料分析题')}<section class="list-page materials-page"><div class="eyebrow">读材料，理清答题思路</div><h1>材料分析题</h1><p>按原题库展示材料、问题和参考答案，直接阅读即可。</p><div class="filter-row material-tabs" role="group" aria-label="材料题章节">${bank.chapters.map(c=>`<button class="filter-chip ${c.id===materialChapter?'selected':''}" data-material-chapter="${c.id}" aria-pressed="${c.id===materialChapter}">${c.title} · ${(bank.materials||[]).filter(m=>m.chapter===c.id).length} 组</button>`).join('')}</div><h2 class="material-chapter-title">${c.title} · ${esc(c.subtitle)}</h2>${items.length?items.map(m=>`<article class="material-card"><div class="question-meta"><span class="type-tag">材料分析</span><span>第 ${m.number} 组</span></div><section><h3>阅读材料</h3>${paragraphs(m.material)}</section><section class="material-questions"><h3>问题</h3>${paragraphs(m.questions)}</section><section class="material-answers"><h3>参考答案</h3>${paragraphs(m.answers)}</section></article>`).join(''):'<div class="empty-state"><h2>本章暂无材料分析题</h2><p>原题库的绪论部分未提供材料题，可切换到第一章或第二章。</p></div>'}</section>`;
 }
 document.addEventListener('click',e=>{
+  if(subject!=='sizheng')return;
   const b=e.target.closest('button');if(!b||b.disabled||!bank)return;
   if(b.dataset.nav){page=b.dataset.nav;render();focusMain();return;}
   if(b.dataset.notebookFilter){notebookFilter[b.dataset.notebookFilter]=b.dataset.value;render();return;}
@@ -155,14 +170,15 @@ function validState(value) {
   return s&&(s.chapter===null||bank.chapters.some(c=>c.id===s.chapter))&&['learn','review','mistakes'].includes(s.mode)&&Array.isArray(s.queue)&&s.queue.every(t=>byId[t.id]&&['learn','quiz'].includes(t.kind))&&Number.isFinite(s.done)&&Number.isFinite(s.total)&&s.results&&s.tries&&Array.isArray(s.selected)&&s.selected.every(a=>/^[A-E]$/.test(a))&&(!s.feedback||typeof s.feedback.correct==='boolean'&&typeof s.feedback.certain==='boolean');
 }
 document.addEventListener('change',async e=>{
-  if(e.target.id!=='import-file')return;
+  if(subject!=='sizheng'||e.target.id!=='import-file')return;
   try{const file=e.target.files[0];if(!file)return;if(file.size>2000000)throw Error();const parsed=JSON.parse(await file.text());if(!validState(parsed))throw Error();if(!confirm('恢复备份将替换当前浏览器的学习进度，是否继续？'))return;state=upgradeSessions(parsed,bank.questions,bank.version);save();render();notice('学习进度已恢复。');}catch{notice('无法读取这份备份，请选择本站导出的有效进度文件。');}
 });
 try {
-  const res=await fetch('./data/questions.json?v=2.0', {cache:'no-cache'});if(!res.ok)throw Error('题库读取失败');bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
+  const res=await fetch('./data/questions.json?v=3.0', {cache:'no-cache'});if(!res.ok)throw Error('题库读取失败');bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
   try{const saved=localStorage.getItem(KEY);if(saved){const parsed=JSON.parse(saved);if(validState(parsed))state=parsed;else notice('旧进度格式无法识别，暂未覆盖原数据。请先备份浏览器中的旧数据。');}}catch{notice('无法读取已保存的进度；本次仍可继续学习。');}
   if(state.session&&state.session.chapter===null&&state.session.mode==='learn'){state.session=null;save();}
   upgradeSessions(state,bank.questions,bank.version);
   if(state.session||Object.keys(state.sessions||{}).length)save();
   render();
+  try{if(localStorage.getItem('wenxi-active-subject')==='python')switchSubject('python');}catch{}
 }catch {main.innerHTML='<section class="empty-state"><h1>题库暂时没能打开</h1><p>请检查网络并刷新页面。若在本地预览，请通过本地服务器打开网站。</p><button onclick="location.reload()" class="primary">重新加载</button></section>';}
