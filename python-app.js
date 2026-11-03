@@ -1,8 +1,8 @@
-import {PYTHON_KEY,emptyPythonState,practiceSession,recordAttempt,pythonNotebook,validPythonState,escapeHtml as esc,inlineText,questionBlocks} from './python-engine.js?v=3.0';
+import {PYTHON_KEY,emptyPythonState,practiceSession,recordAttempt,pythonNotebook,validPythonState,escapeHtml as esc,inlineText,questionBlocks} from './python-engine.js?v=3.1';
 export function createPythonApp({main,notice,isActive}){
  let bank,byId,state=emptyPythonState(),page='home',filterChapter='all',filterStatus='all',ready=null,storageOK=true;
  const persist=()=>{try{localStorage.setItem(PYTHON_KEY,JSON.stringify(state));storageOK=true;}catch{storageOK=false;notice('Python 进度暂时无法保存，请在首页备份进度。');}};
- const head=title=>`<header class="topbar"><span>Python 入门 / <strong>${title}</strong></span><span class="course-tag">直接刷题 <i>V3.0</i></span></header>`;
+ const head=title=>`<header class="topbar"><span>Python 入门 / <strong>${title}</strong></span><span class="course-tag">直接刷题 <i>V3.1</i></span></header>`;
  const focus=()=>{main.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});};
  const notebook=()=>pythonNotebook(bank.questions,state.progress,filterChapter,filterStatus);
  function chrome(){
@@ -40,5 +40,5 @@ export function createPythonApp({main,notice,isActive}){
   }
  });
  document.addEventListener('change',async e=>{if(!isActive()||!bank)return;if(e.target.id==='py-filter-course'){filterChapter=e.target.value;render();}if(e.target.id==='py-filter-status'){filterStatus=e.target.value;render();}if(e.target.id==='py-import'){try{const f=e.target.files[0];if(!f)return;if(f.size>3000000)throw Error();const parsed=JSON.parse(await f.text());if(!validPythonState(parsed,bank.questions))throw Error();if(!confirm('将替换此浏览器的 Python 进度，思政进度不受影响。继续恢复？'))return;state=parsed;persist();render();notice('Python 进度已恢复。');}catch{notice('请选择本站导出的有效 Python 进度备份。');}}});
- return {async show(){page='home';if(!ready)ready=(async()=>{const res=await fetch('./data/python.json?v=3.0',{cache:'no-cache'});if(!res.ok)throw Error();bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));try{const raw=localStorage.getItem(PYTHON_KEY);if(raw){const saved=JSON.parse(raw);if(validPythonState(saved,bank.questions))state=saved;else notice('Python 旧进度无法识别，未覆盖原数据。');}}catch{notice('无法读取 Python 进度，本次仍可练习。');}})();main.innerHTML='<div class="loading">正在打开 Python 课堂题库…</div>';try{await ready;render();}catch{ready=null;if(isActive())main.innerHTML='<div class="empty-state"><h1>Python 题库未能加载</h1><p>请检查网络，或切换学科后重试。</p></div>';}}};
+ return {async show(){page='home';if(!ready)ready=(async()=>{const res=await fetch('./data/python.json?v=3.1',{cache:'no-cache'});if(!res.ok)throw Error();bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));try{const raw=localStorage.getItem(PYTHON_KEY);if(raw){const saved=JSON.parse(raw);if(validPythonState(saved,bank.questions))state=saved;else notice('Python 旧进度无法识别，未覆盖原数据。');}}catch{notice('无法读取 Python 进度，本次仍可练习。');}})();main.innerHTML='<div class="loading">正在打开 Python 课堂题库…</div>';try{await ready;render();}catch{ready=null;if(isActive())main.innerHTML='<div class="empty-state"><h1>Python 题库未能加载</h1><p>请检查网络，或切换学科后重试。</p></div>';}}};
 }

@@ -71,3 +71,7 @@ python3 scripts/import_python.py '/path/to/course/quiz'
 ```
 
 输出为 `data/python.json`；导入器校验题号连续、4 个选项以及答案逐题对应。
+
+## V3.1 科目名称
+
+科目选择更新为「思想道德与法治（期中）」和「python（中外期末）」。

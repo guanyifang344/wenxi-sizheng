@@ -1,5 +1,5 @@
-import {createPythonApp} from './python-app.js?v=3.0';
-import {makeSession, isCorrect, nextRecord, addRetry, upgradeSessions, questionTypeLabel, answerLabel, notebookQuestions} from './engine.js?v=3.0';
+import {createPythonApp} from './python-app.js?v=3.1';
+import {makeSession, isCorrect, nextRecord, addRetry, upgradeSessions, questionTypeLabel, answerLabel, notebookQuestions} from './engine.js?v=3.1';
 const KEY = 'wenxi-sizheng-v1';
 const main = document.querySelector('#main');
 let subject='sizheng';
@@ -35,7 +35,7 @@ function badges() {
   document.querySelectorAll('[data-nav]').forEach(b => b.classList.toggle('active', b.dataset.nav === page));
 }
 function header(label = '学习首页') {
-  return `<header class="topbar"><span>我的复习 / <strong>${label}</strong></span><span class="course-tag">思想道德与法治 <i>V3.0</i></span></header>`;
+  return `<header class="topbar"><span>我的复习 / <strong>${label}</strong></span><span class="course-tag">思想道德与法治 <i>V3.1</i></span></header>`;
 }
 function render() {
   if(subject!=='sizheng')return;
@@ -174,7 +174,7 @@ document.addEventListener('change',async e=>{
   try{const file=e.target.files[0];if(!file)return;if(file.size>2000000)throw Error();const parsed=JSON.parse(await file.text());if(!validState(parsed))throw Error();if(!confirm('恢复备份将替换当前浏览器的学习进度，是否继续？'))return;state=upgradeSessions(parsed,bank.questions,bank.version);save();render();notice('学习进度已恢复。');}catch{notice('无法读取这份备份，请选择本站导出的有效进度文件。');}
 });
 try {
-  const res=await fetch('./data/questions.json?v=3.0', {cache:'no-cache'});if(!res.ok)throw Error('题库读取失败');bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
+  const res=await fetch('./data/questions.json?v=3.1', {cache:'no-cache'});if(!res.ok)throw Error('题库读取失败');bank=await res.json();byId=Object.fromEntries(bank.questions.map(q=>[q.id,q]));
   try{const saved=localStorage.getItem(KEY);if(saved){const parsed=JSON.parse(saved);if(validState(parsed))state=parsed;else notice('旧进度格式无法识别，暂未覆盖原数据。请先备份浏览器中的旧数据。');}}catch{notice('无法读取已保存的进度；本次仍可继续学习。');}
   if(state.session&&state.session.chapter===null&&state.session.mode==='learn'){state.session=null;save();}
   upgradeSessions(state,bank.questions,bank.version);
