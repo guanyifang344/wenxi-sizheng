@@ -10,10 +10,27 @@ lines=[l for l in lines if l]
 sections=[(0,'绪论','担当复兴大任，成就时代新人'),(1,'第一章','领悟人生真谛，把握人生方向'),(2,'第二章','追求远大理想，坚定崇高信念')]
 starts=[next(i for i,l in enumerate(lines) if l.startswith(prefix)) for _,prefix,_ in sections]+[len(lines)]
 questions=[]
+materials=[]
 for (ci,title,subtitle),start,end in zip(sections,starts,starts[1:]):
     block=lines[start:end]
     ai=next(i for i,l in enumerate(block) if l=='参考答案')
     qpart=block[:ai]; apart=block[ai+1:]
+    # Preserve the complete source material, questions and answer paragraphs.
+    material_start=next((i for i,l in enumerate(qpart) if '材料分析题' in l and len(l)<15),None)
+    if material_start is not None:
+        raw=qpart[material_start+1:]
+        chunks=[raw]
+        if ci==2:
+            split=next(i for i,l in enumerate(raw) if l.startswith('（二）'))
+            chunks=[raw[:split],raw[split:]]
+        for mi,chunk in enumerate(chunks,1):
+            answer_at=next(i for i,l in enumerate(chunk) if '答案要点' in l and len(l)<25)
+            question_at=next(i for i,l in enumerate(chunk[:answer_at]) if (l.startswith('1、') if ci==1 else l.startswith('结合材料') or l.startswith('问题设计')))
+            material=chunk[:question_at]
+            prompts=chunk[question_at:answer_at]
+            answers_text=chunk[answer_at+1:]
+            assert material and prompts and answers_text
+            materials.append({'id':f'c{ci}-material-{mi}','chapter':ci,'number':mi,'material':material,'questions':prompts,'answers':answers_text})
     ah=[i for i,l in enumerate(apart) if re.match(r'^[一二三].*(?:选|判断)',l)]+[len(apart)]
     answers={}
     for kind,a,b in zip(['single','multiple','judge'],ah,ah[1:]):
@@ -55,6 +72,6 @@ for (ci,title,subtitle),start,end in zip(sections,starts,starts[1:]):
             assert set(answer)<=set(o['id'] for o in opts)
             assert len(answer)==1 if kind=='single' else len(answer)>1
             questions.append({'id':f'c{ci}-{kind}-{q["number"]}','chapter':ci,'number':q['number'],'type':kind,'prompt':re.sub(r'\s+',' ',txt[:matches[0].start()]).strip(),'options':opts,'answer':list(answer)})
-bank={'version':2,'title':'思想道德与法治','source':Path(sys.argv[1]).name,'chapters':[{'id':i,'title':t,'subtitle':s} for i,t,s in sections],'questions':questions}
+bank={'version':2,'title':'思想道德与法治','source':Path(sys.argv[1]).name,'chapters':[{'id':i,'title':t,'subtitle':s} for i,t,s in sections],'questions':questions,'materials':materials}
 (root/'data/questions.json').write_text(json.dumps(bank,ensure_ascii=False,indent=2)+'\n')
 print(f'Imported and validated {len(questions)} questions')

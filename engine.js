@@ -11,10 +11,15 @@ export function shuffle(items, random = Math.random) {
 export function isCorrect(question, selected) {
   return selected.length === question.answer.length && question.answer.every(x => selected.includes(x));
 }
-export function nextRecord(previous = {}, correct, certain, now = Date.now()) {
+export function nextRecord(previous = {}, correct, certain, now = Date.now(), selected = null) {
   const good = correct && certain;
   const stage = good ? Math.min((previous.stage || 0) + (previous.lastSuccess && now - previous.lastSuccess < DAY ? 0 : 1), 3) : 0;
-  return { ...previous, seen: true, stage, needsWork: !good, attempts: (previous.attempts || 0) + 1,
+  return { ...previous, seen: true, stage, needsWork: !good,
+    inNotebook: Boolean(previous.inNotebook || previous.needsWork || !good),
+    wrongCount: (previous.wrongCount || 0) + (correct ? 0 : 1),
+    uncertainCount: (previous.uncertainCount || 0) + (certain ? 0 : 1),
+    lastSelected: selected ? [...selected] : previous.lastSelected || null,
+    lastCorrect: correct, lastCertain: certain, attempts: (previous.attempts || 0) + 1,
     lastAnswer: now, lastSuccess: good ? now : previous.lastSuccess || null,
     due: good ? now + INTERVALS[Math.max(stage - 1, 0)] * DAY : now };
 }
@@ -71,4 +76,14 @@ export function questionTypeLabel(type) {
 }
 export function answerLabel(question, selected) {
   return question.type === 'judge' ? selected.map(id => question.options.find(o => o.id === id)?.text || id).join('、') : selected.join('、');
+}
+
+export function notebookQuestions(questions, progress, {type='all', chapter='all', status='all'} = {}) {
+  return questions.filter(q => {
+    const p=progress[q.id];
+    return p && (p.inNotebook || p.needsWork) &&
+      (type==='all' || (type==='choice' ? q.type!=='judge' : q.type==='judge')) &&
+      (chapter==='all' || q.chapter===Number(chapter)) &&
+      (status==='all' || (status==='pending' ? p.needsWork : !p.needsWork));
+  });
 }

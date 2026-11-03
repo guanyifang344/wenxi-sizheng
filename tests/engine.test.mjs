@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {makeSession,nextRecord,isCorrect,addRetry,DAY,upgradeSessions,questionTypeLabel,answerLabel} from '../engine.js';
+import {makeSession,nextRecord,isCorrect,addRetry,DAY,upgradeSessions,questionTypeLabel,answerLabel,notebookQuestions} from '../engine.js';
 const bank=JSON.parse(readFileSync(new URL('../data/questions.json',import.meta.url)));
 test('all 264 questions have complete options and matching reference answer types',()=>{
  assert.equal(bank.questions.length,264);assert.equal(new Set(bank.questions.map(q=>q.id)).size,264);
@@ -62,4 +62,31 @@ test('new judgment questions use existing due and mistake review scheduling',()=
  assert.equal(makeSession(bank.questions,p,{chapter:0,mode:'mistakes'}).queue[0].id,q.id);
  assert.equal(makeSession(bank.questions,p,{chapter:0,mode:'review',now:1000}).queue[0].id,q.id);
  const good=nextRecord(p[q.id],true,true,2000);assert.equal(good.needsWork,false);assert.equal(good.due,2000+DAY);
+});
+test('notebook retains corrected questions and filters by type, chapter and status',()=>{
+ const choice=bank.questions.find(q=>q.chapter===0&&q.type==='single');
+ const judge=bank.questions.find(q=>q.chapter===1&&q.type==='judge');
+ const multiple=bank.questions.find(q=>q.chapter===2&&q.type==='multiple');
+ const progress={
+  [choice.id]:nextRecord({},false,true,1000,['C']),
+  [judge.id]:nextRecord({},true,false,1000,['B']),
+  [multiple.id]:{seen:true,needsWork:true,due:1000}
+ };
+ progress[choice.id]=nextRecord(progress[choice.id],true,true,2000,choice.answer);
+ assert.equal(progress[choice.id].wrongCount,1);assert.equal(progress[choice.id].inNotebook,true);
+ assert.deepEqual(progress[choice.id].lastSelected,choice.answer);
+ assert.equal(notebookQuestions(bank.questions,progress).length,3);
+ assert.equal(notebookQuestions(bank.questions,progress,{type:'judge'})[0].id,judge.id);
+ assert.equal(notebookQuestions(bank.questions,progress,{type:'choice',status:'pending'})[0].id,multiple.id);
+ assert.equal(notebookQuestions(bank.questions,progress,{chapter:'0',status:'mastered'})[0].id,choice.id);
+ assert.equal(notebookQuestions(bank.questions,progress,{chapter:'2',type:'judge'}).length,0);
+});
+test('material reading has the complete three source groups and does not enter scored questions',()=>{
+ assert.deepEqual(bank.materials.map(m=>[m.chapter,m.material.length,m.questions.length,m.answers.length]),[[1,4,3,10],[2,2,1,5],[2,6,4,3]]);
+ assert.match(bank.materials[0].material[0],/小林/);
+ assert.match(bank.materials[0].answers.at(-1),/从而获得真实的价值感/);
+ assert.match(bank.materials[1].questions[0],/精神之/);
+ assert.match(bank.materials[2].material.join(''),/材料三：航天强国/);
+ assert.match(bank.materials[2].answers.at(-1),/个人理想融入社会理想/);
+ assert.ok(bank.materials.every(m=>!bank.questions.some(q=>q.id===m.id)));
 });
